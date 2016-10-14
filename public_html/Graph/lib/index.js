@@ -303,7 +303,7 @@ var biojsvisscatterplot;
     setup_graph = function (graph) {
         // setup all the graph elements
         options = graph.options;
-        graph = setup_margins(graph);
+        graph = setup_margins(graph); 
         graph = set_data_order(graph);
         //graph =  setup_size_options(graph);
         // setup svg in general.js

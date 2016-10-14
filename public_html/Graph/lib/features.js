@@ -1,7 +1,7 @@
 
     /**
      * Copyright 2016 Ariane Mora
-     *
+     * 
      * The features are a set of extra features which can be called and
      * implememnted in any of the bioJS graphs. These are not integral to the
      * graphs functionality. Hover bars allow the users to view the groupings

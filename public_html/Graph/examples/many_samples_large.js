@@ -216,7 +216,7 @@ setup_data = function () {
         }
         
         var instance = init(options);
-
+ 
         // Get the d3js SVG element
         //var tmp = document.getElementById(rootDiv.id);
         //var svg = tmp.getElementsByTagName("svg")[0];

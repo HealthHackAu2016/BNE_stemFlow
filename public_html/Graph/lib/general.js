@@ -112,7 +112,7 @@
      * Sets up the SVG element
      * @param {type} graph
      * @returns {unresolved}
-     */
+     */ 
     setup_svg = function (graph) {
         options = graph.options;
         page_options = graph.page_options;

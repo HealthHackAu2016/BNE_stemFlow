@@ -1,4 +1,4 @@
-    /**
+    /** 
      * Copyright 2016 Ariane Mora
      *
      * This contains helper functions related to the building of the axes for
