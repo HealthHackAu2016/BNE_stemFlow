@@ -53,7 +53,7 @@ data_url = 'Graph/data/test.tsv';
 /* Extracting the data from the csv files for use in the graph
  * Also sets relevent options based on the data passed in (for example
  * calculating the min and max values of the graph */
-setup_data = function () {
+setup_data = function (svgID) {
     d3.tsv(data_url, function (error, data) {
        // console.log("in data!")
         
@@ -129,7 +129,7 @@ setup_data = function () {
         subtitle1 = "Subtitle";
         subtitle2 = "Subtitle";
         // ID OF THE ROOT DIV
-        target = "#main";
+        target = svgID;
 
         // can always use just a straight value, but it's nicer when you calculate
         // based off the number of samples that you have
