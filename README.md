@@ -1,5 +1,10 @@
 # BNE_stemFlow
 
+### Getting started
+1. Create new HTML5/JavaScript application in NetBeans. 
+2. Add publicHTML folder from the repo
+3. Deploy (green arrow at top)
+
 Here is a brief run down of where things are in the mock graphing tool that will be used during healthhack.
 
 The example is in Graph/examples and I have set it up to run test.tsv (located in Graph/data).
