@@ -9,12 +9,12 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="Graph/css/biojs-vis-scatter-plot.css">
    </head>
     <body>
-         
+        <div id = "main" ></div>  
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/eligrey/Blob.js/0cef2746414269b16834878a8abc52eb9d53e6bd/Blob.js"></script>
     <script src="Graph/examples/many_samples_large.js"></script>
@@ -23,6 +23,12 @@ and open the template in the editor.
     <script src="Graph/lib/box_bar_line.js"></script>
     <script src="Graph/lib/general.js"></script>
     <script src="Graph/lib/index.js"></script>
-        <div>TODO write content</div>
+        <div> Mock graphing tool for Stemflow to use for testing purposes
+            <br>
+            see ReadME for details </div>
+        <script>
+            options = setup_data();
+            init(options); 
+            </script>
     </body>
 </html>

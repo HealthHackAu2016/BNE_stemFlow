@@ -318,17 +318,15 @@ var biojsvisscatterplot;
         }
         graph = setup_y_axis(graph);
         // In general.js
-        graph = setup_D3_legend(graph, options.probes);
-
+        if (options.display.legend  === "yes") {
+            //graph = setup_D3_legend(graph, options.probes);
+        }
         // Only display the vertical lines if the user chooses so
         if (options.display.vertical_lines === "yes") {
             //Need to pass it the list on which the lines are to be created
             graph = setup_vertical_lines(graph, graph.sample_id_list);
         }
-        // Display the legend if the user has specified they want the legend
-        //  if (options.display.legend  === "yes") {
-        //     graph =  setup_legend(graph);
-        // }
+
         if (options.display.error_bars === "yes") {
             graph = setup_error_bars(graph);
         }
@@ -336,7 +334,7 @@ var biojsvisscatterplot;
         if (options.display.horizontal_lines === "yes") {
             graph = setup_horizontal_lines(graph);
         }
-        //graph =  setup_watermark(graph);
+
         // Display hoverbars is in general.js
         if (options.display.hoverbars === "yes") {
             graph = setup_hover_bars(graph, graph.sample_id_list);
@@ -344,27 +342,26 @@ var biojsvisscatterplot;
         //Specific to scatter so within index
         graph = setup_scatter(graph);
 
-        graph = run_tests(graph); //Runs from the test.js script
+        //graph = run_tests(graph); //Runs from the test.js script
         return graph;
 
     };  // end setup_graph
 
     // run this right at the start of the initialisation of the class
-    init = function (init_options) {
-        var options = default_options();
-        options = init_options;
+    init = function (options) {
+//        var options = default_options();
+//        options = init_options;
         page_options = {}; // was new Object() but jshint wanted me to change this
         //size_options = {};
         var graph = {}; // this is a new object
         graph.options = options;
         graph = preprocess_lines(graph);
         graph = setup_graph(graph);
-        var target = $(options.target);
-        target.addClass('scatter_plot');
+       // var target = $(options.target);
+        //target.addClass('scatter_plot');
 
         svg = graph.svg;
     };
 
     // constructor to run right at the start
-    init(options);
 //};
