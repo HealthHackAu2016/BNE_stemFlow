@@ -26,6 +26,18 @@ var tip = d3.tip()
                     "Sample Type: " + sample_type + "<br/>"
             return temp;
         });
+        
+
+// tip which is displayed when hovering over a collumn. Displays the sample type 
+//of the collumn
+var tipLarge = d3.tip()
+        .attr('class', 'd3-tip')
+        .html(function (d) {
+            temp =
+                    "LARGE TIP ";
+            return temp;
+        });
+        
 
 // this tooltip function is passed into the graph via the tooltip
 var tooltip = d3.tip()
@@ -146,7 +158,7 @@ setup_data = function (svgID) {
             legend_padding: 50,
             height: 400,
             width: 600,
-            margin: {top: 50, left: 60, bottom: 20, right: 20},
+            margin: {top: 50, left: 100, bottom: 20, right: 20},
             initial_padding: 10,
             x_axis_label_padding: 10, //padding for the x axis labels (how far below the graph)
             text_size: "12px",
@@ -204,6 +216,7 @@ setup_data = function (svgID) {
             title_class: "title",
             tip: tip, //second tip to just display the sample type
             tooltip: tooltip, // using d3-tips
+            tipLarge: tipLarge,
             //tooltip1: tooltip1, // using d3-tips unique_id: "chip_id",
             watermark: "http://www1.stemformatics.org/img/logo.gif",
             x_labels: sample_type_array,
