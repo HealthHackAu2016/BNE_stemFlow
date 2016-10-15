@@ -25,11 +25,10 @@ and open the template in the editor.
         <!-- <script src="Graph/lib/box_bar_line.js"></script> -->
         <script src="Graph/lib/general.js"></script>
         <script src="Graph/lib/index.js"></script>
+        <script src="multiview.js"></script>
         <script>
             //Call with the id of te element within which we want to create it
-            //
-            var width = 1
-            var height = 1
+
             var scale_x = 0.33
             var scale_y = 0.33
 
@@ -44,18 +43,18 @@ and open the template in the editor.
             scale(${scale_x}, ${scale_y})
             `
 
-            var gSVG = d3.select('#listSVG').append("g")
-                .attr("transform", svgTranslate)
 
             // [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16].map(function() {
             //
             // })
+            var gSVG = d3.select('#listSVG').append("g")
+                .attr("transform", svgTranslate)
             gSVG.append('svg').attr('id', 'g1')
-            // inject SVG graph into dom elemenet
+            // inject SVG graph into dom element
             init(setup_data("#g1"));
 
         </script>
 
-        <!-- <script src='./bundle.js'></script> -->
+        <script async src='./bundle.js'></script>
     </body>
 </html>
