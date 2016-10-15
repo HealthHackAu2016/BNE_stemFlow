@@ -1,6 +1,6 @@
 #!/bin/bash
 
 cd ~/git/BNE_stemFlow
-git pull -q
+git pull
 
-aws s3 sync public_html/ s3://stemflows3-s3bucket-xong7o21f9ih/
+aws s3 sync --acl public-read public_html/ s3://stemflow.net/
