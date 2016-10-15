@@ -25,34 +25,64 @@ and open the template in the editor.
         <!-- <script src="Graph/lib/box_bar_line.js"></script> -->
         <script src="Graph/lib/general.js"></script>
         <script src="Graph/lib/index.js"></script>
+        <script src="javaScript/multiview.js"></script>
+        
+            <div style="width: 30000px;">
+    <div id="column1" style="float: left; width: 800px; height: 400px;">
+            <div id="g1">hello</div>
+            <div id="g2">hello</div>
+            <div id="g3">hello</div>
+ 
+    </div>
+    <div id="column2" style="float: left; width: 800px; height: 400px;">
+            <div id="g4">hello</div>
+            <div id="g5">hello</div>
+            <div id="g6">hello</div>
+    </div>
+    <div id="column3" style="float: left; width: 800px; height: 400px;">
+            <div id="g7">hello</div>
+            <div id="g8">hello</div>
+            <div id="g9">hello</div>
+    </div>
+<!--    <div id="column4" style="float: left; width: 800px; height: 400px;">
+            <div id="g10">hello</div>
+            <div id="g11">hello</div>
+            <div id="g12">hello</div>
+    </div>
+    <div id="column5" style="float: left; width: 800px; height: 400px;">
+            <div id="g13">hello</div>
+            <div id="g14">hello</div>
+            <div id="g15">hello</div>
+    </div>-->
+<!--    <div id="column6" style="float: left; width: 800px; height: 400px;">
+            <div id="g16">hello</div>
+            <div id="g17">hello</div>
+            <div id="g18">hello</div>
+    </div>-->
+    </div>
+    
+    <script>multiview("g1");</script>
+    <script> multiview("g2");</script>
+    <script> multiview("g3");</script>
+    <script> multiview("g4");</script>
+    <script> multiview("g5");</script>
+    <script> multiview("g6");</script>
+    <script> multiview("g7");</script>
+    <script> multiview("g8");</script>
+    <script> multiview("g9");</script>
+<!--    <script> multiview("g10");</script>
+    <script> multiview("g11");</script>
+    <script> multiview("g12");</script>
+    <script> multiview("g13");</script>
+    <script> multiview("g14");</script>
+    <script> multiview("g15");</script>-->
+<!--    <script> multiview("g16");</script>
+    <script> multiview("g17");</script>
+    <script>multiview("g18");</script>-->
         <script>
             //Call with the id of te element within which we want to create it
             //
-            var width = 1
-            var height = 1
-            var scale_x = 0.33
-            var scale_y = 0.33
-
-            var listSVG = d3.select('#main')
-                .append('svg')
-                .attr('id', 'listSVG')
-                .attr('height', '1000px')
-                .attr('width', '1000px')
-
-
-            var svgTranslate = `
-            scale(${scale_x}, ${scale_y})
-            `
-
-            var gSVG = d3.select('#listSVG').append("g")
-                .attr("transform", svgTranslate)
-
-            // [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16].map(function() {
-            //
-            // })
-            gSVG.append('svg').attr('id', 'g1')
-            // inject SVG graph into dom elemenet
-            init(setup_data("#g1"));
+            
 
         </script>
 
