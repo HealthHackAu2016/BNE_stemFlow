@@ -16,7 +16,7 @@ var multiview = function (divID) {
    // options.scale_x = scale_x;
   //  options.scale_y = scale_y;
     
-   var menu = define_menu();
+   //var menu = define_menu();
 //    var listSVG = d3.select("#" + name)
 //            .append('svg')
 //            .attr('id', 'listSVG');
@@ -28,7 +28,7 @@ var multiview = function (divID) {
 
     //gSVG.append('svg').attr('id', name);
     // inject SVG graph into dom elemenet
-    init(options, scale_x, scale_y, menu);
+    init(options);
 
 
 }

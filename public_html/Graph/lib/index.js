@@ -230,7 +230,14 @@ var biojsvisscatterplot;
                     return colour;
                 })
                 .on('mouseover', tooltip.show)
-                .on('mouseout', tooltip.hide);
+                .on('mouseout', tooltip.hide)
+                .on('click', function() {
+                    console.log("clicked!");
+                })
+                .on("contextmenu", function() {
+                    console.log("right clicked");
+                            d3.contextMenu(menu)
+                });
 
         graph.svg = svg;
         return graph;
@@ -337,7 +344,7 @@ var biojsvisscatterplot;
 
         // Display hoverbars is in general.js
         if (options.display.hoverbars === "yes") {
-            graph = setup_hover_bars(graph, graph.sample_id_list);
+           // graph = setup_hover_bars(graph, graph.sample_id_list);
         }
         //Specific to scatter so within index
         graph = setup_scatter(graph);
@@ -348,15 +355,9 @@ var biojsvisscatterplot;
     };  // end setup_graph
 
     // run this right at the start of the initialisation of the class
-    init = function (options, scale_x, scale_y, menu) {
-//        var options = default_options();
-//        options = init_options;
+    init = function (options) {
         page_options = {}; // was new Object() but jshint wanted me to change this
-        //size_options = {};
         var graph = {}; // this is a new object
-        options.menu = menu;
-        options.scaleGroupX= scale_x;
-        options.scaleGroupY = scale_y;
         graph.options = options;
         
         graph = preprocess_lines(graph);

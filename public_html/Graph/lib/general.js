@@ -98,7 +98,13 @@
 
     }; ///end setup margins
 
-
+   large_tip = d3.tip()
+            .attr('class', 'd3-tip')
+            .html(function (d) {
+                //return d3.select(this);
+            });
+            
+            
     set_data_order = function(graph) {
         if (options.sample_type_order !== "none") {
             options.data.sort(function(a, b) {
@@ -114,11 +120,31 @@
      * @returns {unresolved}
      */ 
     setup_svg = function (graph) {
+ var menu = [
+        {
+            title: 'Item #1',
+            action: function (elm, d, i) {
+                console.log('Item #1 clicked!');
+                console.log('The data for this circle is: ' + d);
+            },
+            disabled: false // optional, defaults to false
+        },
+        {
+            title: 'Item #2',
+            action: function (elm, d, i) {
+                console.log('You have clicked the second item!');
+                console.log('The data for this circle is: ' + d);
+            }
+        }
+    ]       
+        
+        
         options = graph.options;
         page_options = graph.page_options;
         full_width = page_options.full_width;
         full_height = page_options.full_height;
-
+        var scaleX = 0.9;
+        var scaleY = 0.9;
         graph.full_width = full_width;
         graph.full_height = full_height;
         background_stroke_width = options.background_stroke_width;
@@ -129,7 +155,9 @@
                 .html('')
                 .css('width', full_width + 'px')
                 .css('height', full_height + 'px');
-
+        
+     
+        //svg.call(large_tip);
         // setup the SVG. We do this inside the d3.tsv as we want to keep everything in the same place
         // and inside the d3.tsv we get the data ready to go (called options.data in here)
         var svg = d3.select(options.target).append("svg")
@@ -137,10 +165,20 @@
                 .attr("height", full_height)
                 .append("g")
                 // this is just to move the picture down to the right margin length
-                .attr("transform", "translate(" + page_options.margin.left + "," + page_options.margin.top + ")" + " scale(" +0.3 + "," + 0.3 + ")")
-//                .attr("transform", "scale(" + options.scaleGroupX + "," + options.scaleGroupY + ")");
-//                .on("contextmenu", d3.contextMenu(options.menu));
-
+                .attr("transform", "translate(" + page_options.margin.left + "," + page_options.margin.top + ")" + " scale(" + scaleX + "," + scaleY + ")")
+                .attr("class", options.title_class)
+                        .on('mouseover', function() {
+                      // var thissvg = d3.select(this);
+                      // thissvg.attr("transform", "translate(" + 300 + "," + 300+ ")" + " scale(" + 3 + "," + 3 + ")");
+                                    console.log("clicked!");
+                                   // thissvg.call(options.tipLarge);
+                                   // options.tipLarge.show;
+                })
+                .on("contextmenu", function() {
+                    console.log("right clicked");
+                            d3.contextMenu(menu);
+                });                        
+                
 
         // this is to add a background color
         // from: http://stackoverflow.com/questions/20142951/how-to-set-the-background-color-of-a-d3-js-svg
@@ -151,11 +189,14 @@
                 .attr("stroke", background_stroke_colour)
                 .attr("fill", options.background_colour);
 
+
         // this is the Main Title
         // http://bl.ocks.org/mbostock/7555321
 
         // Positions the title in a position relative to the graph
         height_divisor = 1.5;
+        var tip = options.tipLarge;
+        svg.call(tip);
         count = 0; // keeps track of the number of subtitles and if we
         // need to change the graph size to account for them
         svg.append("text")
@@ -167,7 +208,19 @@
                 .style("font-family", options.font_style)
                 .style("font-size", options.title_text_size)
                 .style("fill", "black")
-                .attr("class", options.title_class);
+                .attr("class", options.title_class)
+                .on('mouseover', tip.show)
+                .on('mouseover', tip.hide);
+//                        .on('click', function() {
+//                            
+//                       // d3.select()
+//               
+//                                    console.log("clicked!titelllalal");
+//                })
+//                .on("contextmenu", function() {
+//                    console.log("right clicked");
+//                            d3.contextMenu(menu);
+//                });
 
         //Adds the subtitles to the graph
         for (i = 0; i < options.subtitles.length; i++) {
