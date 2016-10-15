@@ -2,6 +2,7 @@
 import React from "react";
 import * as d3 from 'd3';
 // import multiview from './javaScript/multiview.js'
+// already loaded from script tags
 import LazyLoad from 'react-lazy-load';
 import Waypoint from 'react-waypoint';
 
@@ -23,12 +24,12 @@ class App extends React.Component {
             return null
         }
 
-        console.log("Loading graph: g" + this.state.numGraphs);
 
         try {
             this.setState({
                 numGraphs: this.state.numGraphs + 1
             })
+			console.log("Loading graph: g" + this.state.numGraphs);
             multiview('g' + this.state.numGraphs)
         } catch (e) {
             console.log("MULTIVIEW DRAWING ERROR:");
