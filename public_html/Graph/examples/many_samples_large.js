@@ -228,6 +228,7 @@ setup_data = function (svgID) {
             y_column: 'Expression_Value'
         }
         
+        return options;
         var instance = init(options);
  
         // Get the d3js SVG element
@@ -237,5 +238,6 @@ setup_data = function (svgID) {
         //var svg_xml = (new XMLSerializer).serializeToString(svg);
 
     });
-    return options;
+   
+    //return options;
 }

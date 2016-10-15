@@ -229,9 +229,10 @@
         <script src="javaScript/multiview.js"></script> 
         <script src="javaScript/zoomed.js"></script> 
             <div style="min-width: 3000px;">
-    <div style="float: left; max-width: 700px; max-height: 400px;">
+    <div style="float: left; max-width: 3000px; max-height: 5000px;">
             <div id="g1"></div>
-            <div id="g2"></div>
+    </div>
+<!--            <div id="g2"></div>
             <div id="g3"></div>
             <div id="g10"></div>
             <div id="g12"></div>
@@ -262,12 +263,14 @@
             <div id="g27"></div>
             <div id="g28"></div>
             <div id="g29"></div>
-    </div>
+    </div>-->
 
     </div>
     
-    <script>multiview("g1");</script>
-    <script> multiview("g2");</script>
+    <script>
+        window.onload(multiview("g1", 3, 3));
+        </script>
+<!--    <script> multiview("g2");</script>
     <script> multiview("g3");</script>
     <script> multiview("g4");</script>
     <script> multiview("g5");</script>
@@ -293,7 +296,7 @@
     <script> multiview("g27");</script>
     <script> multiview("g28");</script>
     <script> multiview("g29");</script>
-    </div>
+    </div>-->
 
            <div id="displayGeneDetail" class="showDetail searchDiv hidden">
                 <div class="innerDiv">

@@ -149,35 +149,35 @@
         graph.full_height = full_height;
         background_stroke_width = options.background_stroke_width;
         background_stroke_colour = options.background_stroke_colour;
-
-        // clear out html
-        $(options.target)
-                .html('')
-                .css('width', full_width + 'px')
-                .css('height', full_height + 'px');
-        
-     
+        var svg = options.target;
+//        // clear out html
+//        $(options.target)
+//                .html('')
+//                .css('width', full_width + 'px')
+//                .css('height', full_height + 'px');
+//        
+//     
         //svg.call(large_tip);
         // setup the SVG. We do this inside the d3.tsv as we want to keep everything in the same place
         // and inside the d3.tsv we get the data ready to go (called options.data in here)
-        var svg = d3.select(options.target).append("svg")
-                .attr("width", full_width)
-                .attr("height", full_height)
-                .append("g")
-                // this is just to move the picture down to the right margin length
-                .attr("transform", "translate(" + page_options.margin.left + "," + page_options.margin.top + ")" + " scale(" + scaleX + "," + scaleY + ")")
-                .attr("class", options.title_class)
-                        .on('mouseover', function() {
-                      // var thissvg = d3.select(this);
-                      // thissvg.attr("transform", "translate(" + 300 + "," + 300+ ")" + " scale(" + 3 + "," + 3 + ")");
-                                    console.log("clicked!");
-                                   // thissvg.call(options.tipLarge);
-                                   // options.tipLarge.show;
-                })
-                .on("contextmenu", function() {
-                    console.log("right clicked");
-                            d3.contextMenu(menu);
-                });                        
+//        var svg = d3.select(options.target).append("svg")
+//                .attr("width", full_width)
+//                .attr("height", full_height)
+//                .append("g")
+//                // this is just to move the picture down to the right margin length
+//                .attr("transform", "translate(" + page_options.margin.left + "," + page_options.margin.top + ")" + " scale(" + scaleX + "," + scaleY + ")")
+//                .attr("class", options.title_class)
+//                        .on('mouseover', function() {
+//                      // var thissvg = d3.select(this);
+//                      // thissvg.attr("transform", "translate(" + 300 + "," + 300+ ")" + " scale(" + 3 + "," + 3 + ")");
+//                                    console.log("clicked!");
+//                                   // thissvg.call(options.tipLarge);
+//                                   // options.tipLarge.show;
+//                })
+//                .on("contextmenu", function() {
+//                    console.log("right clicked");
+//                            d3.contextMenu(menu);
+//                });                        
                 
 
         // this is to add a background color

@@ -4,31 +4,49 @@
  * and open the template in the editor.
  */
 
+
+//var setup_multiview = function()
 //Call with the id of te element within which we want to create it
-var multiview = function (divID) {
-    var options = setup_data("#" + divID);
-    //  init(options);
-//    var name = divID + "-wrapper";
-//    var name_html_search = "#" + name;
-    var scale_x = 0.3;
-    var scale_y = 0.3;
-    
-   // options.scale_x = scale_x;
-  //  options.scale_y = scale_y;
-    
-   //var menu = define_menu();
-//    var listSVG = d3.select("#" + name)
-//            .append('svg')
-//            .attr('id', 'listSVG');
-//
-//    var gSVG = listSVG.append("g")
-//            .attr("id", name)
-//            .attr("transform", "scale(" + scale_x + "," + scale_y + ")")
-//            .on("contextmenu", d3.contextMenu(menu));
+var multiview = function (divID, numRows, numCols) {
+    var name = "#" + divID;
 
-    //gSVG.append('svg').attr('id', name);
-    // inject SVG graph into dom elemenet
-    init(options);
+    var scaleX = 0.3;
+    var scaleY = 0.3;
+    var height = 400;
+    var width = 600;
+    var full_height = 400 * numRows;
+    var full_width = 600 * numCols;
+    var margin = {top: 50, left: 100, bottom: 20, right: 20};
+    // clear out html
+    $(name)
+            .html('')
+            .css('width', full_width + 'px')
+            .css('height', full_height + 'px');
 
+    var svg = d3.select(name).append("svg")
+            .attr("width", full_width)
+            .attr("height", full_height);
 
+    for (var y = 0; y < numRows; y++) {
+        for (var x = 0; x < numCols; x++) {
+            var transformX = width * x + margin.left;
+            var transformY = height * y + margin.top;
+            var group = svg.append("g")
+                    // this is just to move the picture down to the right margin length
+                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")" + " scale(" + scaleX + "," + scaleY + ")")
+                    .attr("class", "title")
+                    .on('mouseover', function () {
+                        var thissvg = d3.select(this);
+                        thissvg.attr("transform", "translate(" + transformX + "," + transformY + ")" );
+                        console.log("clicked!");
+                    })
+                     .on('mouseout', function() {
+                        var thissvg = d3.select(this);
+                        thissvg.attr("transform", "translate(" + -transformX + "," + -transformY + ")" );
+                        console.log("clicked!");
+                    });
+            var options = setup_data(group);
+            var groupRet = init(options);
+        }
+    }
 }

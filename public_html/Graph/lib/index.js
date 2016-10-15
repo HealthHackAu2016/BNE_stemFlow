@@ -348,25 +348,17 @@ var biojsvisscatterplot;
         }
         //Specific to scatter so within index
         graph = setup_scatter(graph);
-
-        //graph = run_tests(graph); //Runs from the test.js script
         return graph;
-
     };  // end setup_graph
 
     // run this right at the start of the initialisation of the class
     init = function (options) {
         page_options = {}; // was new Object() but jshint wanted me to change this
         var graph = {}; // this is a new object
-        graph.options = options;
-        
+        graph.options = options;    
         graph = preprocess_lines(graph);
         graph = setup_graph(graph);
-       // var target = $(options.target);
-        //target.addClass('scatter_plot');
-
         svg = graph.svg;
+        return svg;
     };
 
-    // constructor to run right at the start
-//};
