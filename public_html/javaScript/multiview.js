@@ -37,3 +37,4 @@ var multiview = function (divID) {
     init(setup_data(name_html_search));
 
 }
+
