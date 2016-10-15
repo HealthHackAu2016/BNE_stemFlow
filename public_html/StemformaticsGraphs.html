@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0109)http://www.stemformatics.org/expressions/multi_dataset_result?graphType=default&gene=ENSG00000107485&db_id=56 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+		
+    <title>Stemformatics Graphs - Multi Dataset Result</title>
+    <meta name="google-site-verification" content="eKfRHsSQKFfEQDBulOvJy8P1H6d5PpjgRp8IoMXgE0A">
+	<!-- <meta http-equiv="content-language" content="en-us" /> -->
+	
+ <link rel="stylesheet" type="text/css" href="Graph/css/biojs-vis-scatter-plot.css">
+        <meta name="author" content="Australian Institute of Bioengineering and Nanotechnology (AIBN)">
+        <meta name="description" content="">
+        <meta name="keywords" content="microarray, gene expression">
+	
+    <!-- Task #426 Safari iPhone issue -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- jQuery, jQuery-UI and additional plug-ins should go here. -->
+    <script type="text/javascript" async="" src="./Stemformatics Graphs - Multi Dataset Result_files/ga.js"></script><script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/jquery.min.js"></script>
+
+    
+    <!-- jQuery css is included first.  Add other .css files after this line. -->
+        <link rel="stylesheet" type="text/css" href="./Stemformatics Graphs - Multi Dataset Result_files/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="./Stemformatics Graphs - Multi Dataset Result_files/jquery.dataTables.min.js"></script>
+        <script src="./Stemformatics Graphs - Multi Dataset Result_files/jquery.simplemodal.min.js"></script>
+
+        <link href="./Stemformatics Graphs - Multi Dataset Result_files/combined_jquery_ui_tripoli_full.min.css" type="text/css" rel="stylesheet"> 
+
+	
+
+        <script src="./Stemformatics Graphs - Multi Dataset Result_files/main_table2CSV_help_min.js" type="text/javascript"></script> 
+
+
+    <link href="./Stemformatics Graphs - Multi Dataset Result_files/screen.css" type="text/css" rel="stylesheet"> 
+    
+
+    <script type="text/javascript">
+    
+        var BASE_PATH = "/";
+    var DELIMITER = "|";
+    var SITE_NAME = "Stemformatics";
+    check_browser(); // this relies on main.js
+    </script>
+
+
+
+
+    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/marked.min.js"></script>
+    <script src="./Stemformatics Graphs - Multi Dataset Result_files/jquery.cookie.js"></script> 
+    <script src="./Stemformatics Graphs - Multi Dataset Result_files/guiders-1.3.0.js"></script>
+
+
+    <script src="./Stemformatics Graphs - Multi Dataset Result_files/helpsystem.js" type="text/javascript"></script> 
+
+    
+ 
+	<script type="text/javascript">
+      var _gaq = _gaq || [];
+         
+      _gaq.push(['_setAccount', 'UA-20041624-1']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+
+
+  
+        
+		<!-- all the javascript and css includes for the rendered mako file -->  	
+		
+
+    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/multi_dataset_result.js"></script>
+    
+        <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/geg.min.js"></script>
+ 
+    
+    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/jquery.flot.min.js"></script>
+    <script src="./Stemformatics Graphs - Multi Dataset Result_files/kinetic.min.js"></script>
+    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/base64.js"></script>
+    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/canvas2image.js"></script>
+
+    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/s4m_graphing.min.js"></script>
+    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/md5-min.js"></script>
+
+
+
+    
+    <link type="text/css" href="./Stemformatics Graphs - Multi Dataset Result_files/gene_info.css" rel="stylesheet">
+    <link type="text/css" href="./Stemformatics Graphs - Multi Dataset Result_files/multi_dataset_result.css" rel="stylesheet">
+    
+    
+
+        
+	</head>
+
+	<body>
+        
+                <div id="header">
+                
+                <div class="limitedHeader">
+                        <a class="logo" href="http://www.stemformatics.org/" data_hover_text="Click for home page"></a>
+                    <a href="http://www.stemformatics.org/"><div id="project_logo" class=""></div></a>
+                    
+                    <div class="rightHeader logged_in">
+                        <div class="user-info">
+                            <div class="hidden" id="user">guest@stemformatics.org</div>
+                            <div class="full_name" id="full_name">Guest Account</div>
+                            <div class="hidden" id="uid">44</div>
+                        </div>
+                        <div class="login-tasks">
+                                <a id="logout_link" href="http://www.stemformatics.org/auth/logout">Logout </a>|<a href="http://www.stemformatics.org/auth/history/show">History</a>|<a class="no_padding_right" href="http://www.stemformatics.org/auth/update_details">My account</a><br><a href="http://www.stemformatics.org/ensembl_upgrade/index">Ensembl upgrade</a>
+                                <!-- |<a id=unread_notifications href="/auth/notifications">My Notifications (1)</a> -->
+                        </div>
+                        
+                    </div>
+                    
+    <div class="help_icon"><a href="http://www.stemformatics.org/contents/faq"><img src="./Stemformatics Graphs - Multi Dataset Result_files/help_icon.png"></a>
+        <ul class="main_help_menu">
+                <li><a class="page_guide" href="http://www.stemformatics.org/expressions/multi_dataset_result?graphType=default&amp;gene=ENSG00000107485&amp;db_id=56#">Toggle in-page help</a></li>
+
+
+            <li class="sep"></li>
+          
+        
+
+        
+                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=guest" data-tutorial="guest">Guest Tutorial</a></li>
+        
+
+        
+                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=create_gene_list" data-tutorial="create_gene_list">Create Gene List Tutorial</a></li>
+        
+
+        
+                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=Gene_List_View" data-tutorial="Gene_List_View">Gene List View Tutorial</a></li>
+        
+
+        
+                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=yugene" data-tutorial="yugene">Yugene Tutorial</a></li>
+        
+
+        
+                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=New_Features" data-tutorial="New_Features">New Features Tutorial</a></li>
+        
+
+        
+                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=multiview" data-tutorial="multiview">Multiview Tutorial</a></li>
+        
+
+        
+                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=gene_expression_graph" data-tutorial="gene_expression_graph">Gene Expression Graph Tutorial</a></li>
+        
+
+        
+                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=registration" data-tutorial="registration">Registration Tutorial</a></li>
+        
+
+        
+                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=Rohart_MSC_Test" data-tutorial="Rohart_MSC_Test">Rohart Msc Test Tutorial</a></li>
+        
+
+        
+                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=gene_search" data-tutorial="gene_search">Gene Search Tutorial</a></li>
+                                                <li class="sep"></li>
+                                                <li><a href="http://www.stemformatics.org/contents/faq">General Help &amp; FAQ</a></li>
+         
+                                           </ul>
+    </div>
+
+                </div>
+            </div>
+            <div id="menus">
+                <div id="main_headers">
+
+
+
+                    <div class="header"><a id="header-genesearch-button" href="http://www.stemformatics.org/genes/search">GENES &gt;</a>
+                    </div>
+                    <div class="header">
+                        <a id="header-datasetsearch-button" href="http://www.stemformatics.org/datasets/search">DATASETS &gt;</a>
+                    </div>
+                    <div class="header"><a class="selected" id="header-graphs-button" href="http://www.stemformatics.org/expressions/index">GRAPHS &gt;</a></div>
+                    <div class="header"><a id="header-analyses-button" href="http://www.stemformatics.org/workbench/index">ANALYSES &gt;</a></div>
+                    <div class="header"><a id="header-analyses-button" href="http://www.stemformatics.org/workbench/jobs_index">MY JOBS &gt;</a></div>
+                    <div class="header"><a id="header-about-us-button" href="http://www.stemformatics.org/contents/about_us">ABOUT US &gt;</a></div>
+                    <!-- <div class="search"><a href="/datasets/search">CELL SEARCH ></a></div>
+                    <div class="search"><a href="/datasets/search">LOCATION SEARCH ></a></div> -->
+                </div>
+            </div> 
+
+
+
+
+
+
+  
+        <div id="main_body">
+            
+            <!-- actual body for the rendered mako file -->
+            
+
+
+    
+    <div id="mult_dataset_graph_header">
+        
+        <a id="multiChooseDatasets" class="chooseDatasetsButton multiview-attached page_guide-attached" href="http://www.stemformatics.org/expressions/multi_dataset_result?gene=ENSG00000107485&amp;db_id=56&amp;graphType=box&amp;force_choose=yes"><span>CHANGE DATASETS</span><img src="./Stemformatics Graphs - Multi Dataset Result_files/show_genes.png"></a>
+
+            <div class="search_box multiview-attached page_guide-attached">
+                <div class="searchField">
+                    <form id="geneSearchForm" name="search" method="GET" action="http://www.stemformatics.org/expressions/multi_dataset_result?graphType=default&amp;gene=ENSG00000107485&amp;db_id=56#">
+                        <input id="geneSearch" name="filter" class="mv ui-autocomplete-input" type="text" value="GATA3" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                    </form>
+                </div>
+                <a id="viewGenes" class="searchButton"><span>SEARCH</span><img src="./Stemformatics Graphs - Multi Dataset Result_files/show_genes.png"></a>
+            </div>
+
+
+    </div>
+            <div style="height: 3000px;">
+                    <div id = "main" ></div>
+        <script src="//d3js.org/d3.v3.min.js"></script>
+        <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/eligrey/Blob.js/0cef2746414269b16834878a8abc52eb9d53e6bd/Blob.js"></script>
+
+        <script src="Graph/examples/many_samples_large.js"></script>
+        <script src="Graph/lib/features.js"></script>
+        <script src="Graph/lib/axis.js"></script>
+        <!-- <script src="Graph/lib/box_bar_line.js"></script> -->
+        <script src="Graph/lib/general.js"></script>
+        <script src="Graph/lib/index.js"></script>
+        <script src="javaScript/multiview.js"></script> 
+        
+            <div style="min-width: 3000px;">
+    <div id="column1" style="float: left; min-width: 400px; max-height: 400px;">
+            <div id="g1"></div>
+            <div id="g2"></div>
+            <div id="g3"></div>
+ 
+    </div>
+    <div id="column2" style="float: left; width: 400px; max-height: 400px;">
+            <div id="g4"></div>
+            <div id="g5"></div>
+            <div id="g6"></div>
+    </div>
+    <div id="column3" style="float: left; width: 400px; max-height: 400px;">
+            <div id="g7"></div>
+            <div id="g8"></div>
+            <div id="g9"></div>
+    </div>
+<!--    <div id="column4" style="float: left; width: 800px; height: 400px;">
+            <div id="g10">hello</div>
+            <div id="g11">hello</div>
+            <div id="g12">hello</div>
+    </div>
+    <div id="column5" style="float: left; width: 800px; height: 400px;">
+            <div id="g13">hello</div>
+            <div id="g14">hello</div>
+            <div id="g15">hello</div>
+    </div>-->
+<!--    <div id="column6" style="float: left; width: 800px; height: 400px;">
+            <div id="g16">hello</div>
+            <div id="g17">hello</div>
+            <div id="g18">hello</div>
+    </div>-->
+    </div>
+    
+    <script>multiview("g1");</script>
+    <script> multiview("g2");</script>
+    <script> multiview("g3");</script>
+    <script> multiview("g4");</script>
+    <script> multiview("g5");</script>
+    <script> multiview("g6");</script>
+    <script> multiview("g7");</script>
+    <script> multiview("g8");</script>
+    <script> multiview("g9");</script>
+    </div>
+
+           <div id="displayGeneDetail" class="showDetail searchDiv hidden">
+                <div class="innerDiv">
+                    
+                    
+                    <div class="hidden entrezID">2625</div>
+                    <div class="hidden ensemblID">ENSG00000107485</div>
+                    <div class="hidden db_id">56</div>
+                    <div id="official_symbol" class="hidden">GATA3</div>
+                    
+                    <div class="title showEntrez">GATA3</div>
+                    <div class="description"><div class="description">GATA binding protein 3 </div></div>
+                    
+                    <!-- <a href='/expressions/result?graphType=box&amp;gene=ENSG00000107485&amp;db_id=56' class='linkButtons' id='viewLargerImage'>VIEW EXPRESSION > </a>
+                    <a href='/expressions/multi_dataset_result?graphType=sca&amp;gene=ENSG00000107485&amp;db_id=56' class="linkButtons" id="multiview">MULTIVIEW > </a>
+-->
+       
+                    <div class="showDescription showLabel">Entrez Gene ID:</div><div class="showDescriptionValue"><a target="_blank" href="http://www.ncbi.nlm.nih.gov/gene/2625" class="showDescriptionValue showEntrez">2625</a></div> 
+                    <div class="showDescription showLabel">Ensembl ID: </div><div class="showDescriptionValue"><a target="_blank" href="http://www.ensembl.org/Homo_sapiens/Gene/Summary?g=ENSG00000107485" class="showDescriptionValue showEnsembl underline">ENSG00000107485</a></div>
+                    <div class="showDescription showLabel"> Aliases: </div><div class="showDescriptionValue"><a target="_blank" href="http://www.ncbi.nlm.nih.gov/gene/2625" class="showDescriptionValue showEntrez">HDR HDRS</a></div>
+                    <div class="showDescription showLabel ">  Diseases via OMIM:</div><div class="showDescriptionValue"><a target="_blank" href="http://www.ncbi.nlm.nih.gov/gene?Db=omim&amp;DbFrom=gene&amp;Cmd=Link&amp;LinkName=gene_omim&amp;LinkReadableName=OMIM&amp;IdsFromResult=2625" class="showDescriptionValue showDiseases underline "> Click here for details</a></div>
+                    <div class="showDescription showLabel ">  UCSC Browser:</div> <div class="showDescriptionValue"><a target="_blank" class="showDescriptionValue underline" href="http://genome.ucsc.edu/cgi-bin/hgTracks?position=chr10:8095567-8117161&amp;db=hg19" id="otheh_link">Public UCSC</a></div> 
+                    <div class="showDescription showLabel ">  Pubmed Links </div><div class="showDescriptionValue"><a target="_blank" href="http://www.ncbi.nlm.nih.gov/gene?Db=pubmed&amp;DbFrom=gene&amp;Cmd=Link&amp;LinkName=gene_pubmed&amp;LinkReadableName=PubMed&amp;IdsFromResult=2625" class="showDescriptionValue showPubMed underline "> Click here for details</a></div>
+        
+                    <div class="clear"></div> 
+                <div class="title">Stemformatics Data Methods</div>
+                <div class="description">This document includes the normalisation methods, mappings and database imports like Kegg.</div>
+                <div class="showDescription showLabel ">  Document Link </div><div class="showDescriptionValue"><a target="_blank" href="http://www.stemformatics.org/Stemformatics_data_methods.pdf" class="showDescriptionValue ">Data Methods PDF</a></div> 
+                    
+            </div>
+                
+        </div>
+        <div class="clear"></div>
+  
+
+        </div> 
+
+        </div> 
+        
+            <div class="clear"></div>
+            <div id="footer">
+                <div class="footer_central">
+                    <div class="leftfooterText">
+                        <span>© 2015 Stemformatics</span><span>v6.4</span><span><a href="http://www.stemformatics.org/contents/disclaimer">Disclaimer</a></span><span><a href="http://www.stemformatics.org/contents/privacy_policy">Privacy Policy</a></span><span>w3-s4m </span>
+                    </div>
+                    <div class="rightfooterText">
+                        <span class="website">Website hosted by </span><a class="qcif" href="http://www.qcif.edu.au/"></a>  <a class="nectar" href="http://nectar.org.au/"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal_div" class="modal">
+        
+                <div id="wb_modal_title" class="wb_modal_title">
+                    
+                </div>
+                <div id="wb_modal_content" class="wb_modal_content">
+                    
+                </div>
+                
+            </div>
+            <div id="guide-wrapper"></div>
+            <div id="generic_tooltip"></div>
+            <div id="tutorials_for_page" class="hidden">{"tutorials": {"multiview": [{"highlight": false, "shouldSkip": "return ($('.wb_question_groups_selected').length == 0)", "showPrev": false, "description": ["This is the Multiview page.  It shows the expression graph for four different datasets side by side."], "title": "Multiview"}, {"attachTo": "#chooseDatasetTable_wrapper", "shouldSkip": "return ($('.wb_question_groups_selected').length == 0)", "showNext": false, "description": ["If you see the gene you want straight away, just click on it.  Otherwise, use the filter field to narrow them down first.", "", "**Click on a gene now to continue.**"], "title": "Search Results"}, {"position": 7, "attachTo": "#multiChooseDatasets", "description": ["Use this button to change which four datasets are currently displayed."]}, {"position": 7, "attachTo": ".search_box", "description": ["You can also change the selected gene by using the search box."]}, {"highlight": false, "description": ["Well done.  You have completed the tutorial.", "", "If you need help on the expression graph do [this](/contents/index#tutorial=gene_expression_graph) tutorial. Other tutorials can be found using the help icon at the top of the page"], "scripts": {"onHide": "clearInterval(hash_change_timer);", "onShow": "hash_change_current = window.location.hash; hash_change_timer = setInterval(function() { if (hash_change_current != window.location.hash) location.reload(); }, 200);"}, "final": true, "title": "Tutorial Complete!"}]}, "page_guide": [{"position": 11, "attachTo": "#multiChooseDatasets", "description": ["This allows you to select a different dataset.", "", "You can filter through the datasets by the search box at the top."], "title": "Change Datasets"}, {"position": 9, "attachTo": "#kinetic_legend", "description": ["This legend is movable. Simply left click and hold your mouse within the grey area and then move your mouse."], "title": "Movable Legend"}, {"position": 6, "attachTo": "#searchMainArea", "description": "If you wish to change the current gene, start typing in here and after 4 characters are entered a dropdown appears with genes matching the search.  Use the mouse or arrow keys to select a gene, or just keep typing and press enter or click the change gene button to the right.", "title": "Gene Search"}, {"position": 11, "attachTo": "#exportMenu", "description": ["This allows you to export graph data and share with other users that have access to this dataset."], "title": "Export and Share Menu"}, {"position": 3, "width": 300, "attachTo": "#graphOptionsMenu", "description": ["Click here to show the Graph Options menu.  This is where you can switch graph types, as well as some other graph specific options.", "", "Toggle Automatic Minimum Y axis automatically calculates the y axis to reduce the y axis range.  Expand Graph Horizontally allows the width to be expanded to see large amounts of data more easily.", "", "Some datasets also allow you to group by other metadata eg. Disease State. If that is the case, you will see a Group By Disease State option.", "", "*Note:* The show graph data option adds a table to the bottom of the page loaded with the data."], "title": "Graph Options Menu"}, {"position": 9, "width": 350, "attachTo": "#analysisMenu", "description": ["Click here to show the Analysis menu.", "", "There is only one option, the Yugene Interactive Graph. This allows you to view the expression profile for all available datasets for a single gene."], "title": "Analysis Menu"}, {"position": 7, "attachTo": "div.breadcrumbs", "description": ["This is a list of all the options that have been selected to get you to this page.", "", "You can click on the underlined links to go back to that option."], "title": "Breadcrumb Links"}, {"position": 11, "attachTo": "#helpMenu", "description": ["Click here to toggle this help."], "title": "Help Menu"}, {"position": 11, "attachTo": "#genomeMenu", "description": ["Click here to show the Genome menu.", "", "This allows you to see the UCSC Genome Browser. If you are logged in, you can also see tracks that are linked to your account."], "title": "Genome Menu"}, {"position": 11, "title": "Legend", "attachTo": "#newLegend", "description": ["This is the legend of the list of groupings for this graph.", "", "For the Boxplot and Bar graph the labels shown are the Sample types for this dataset.", "", "For the Scatterplot the labels shown are the probes that map to this gene.", "", "For the Line graph the labels shown are the groups that were created to show tendencies across time.", "", "Some datasets also allow you to group by other metadata eg. Disease State. If that is selected, you will see compound labels of Sample type + Disease State. eg. hONS control or fibroblast Parkinsons"], "width": 650}, {"position": 11, "attachTo": "#infoMenu", "description": "Click here to show the Info menu. It includes details of this gene and associated links and also the link to the Stemformatics Data Methods PDF.", "title": "Info Menu"}, {"position": 6, "attachTo": "div.search_box", "description": "This allows you to change the gene for this dataset. If you type in four letters or more an autocomplete function will be provided.", "title": "Gene Search"}, {"description": ["The scatter graph has a different structure than the other two graph types.  Here the samples are on the x axis and the colours represent the probes.", "", "![plus](/help/images/scatter.png)", "", "1. Points are normally individual readings from the given probe and sample.", "2. Where technical replicates are available however, the points are an average of the replicates with the bars representing their standard deviation.", "", "You can mouse over the points on the graph to show their sample id (also called replicate group ID).", "", "The black values at the bottom of the graph are the Sample Types for this dataset.", "", "The green and blue lines are the *dataset's* median expression value and detection threshold respectively."], "title": "Scatter Graph", "width": 800, "attachTo": "div.graph_scatter", "position": 11, "css": {".guiders_description img": {"float": "left"}, ".guiders_description ol": {"margin-left": "180px"}}}, {"description": ["The bar graph displays the expression data of the gene's probes grouped by the Sample Type.", "", "![plus](/help/images/bar.png)", "", "1. Mean expression value for the probe and Sample Type.", "2. Error bars representing +/- 1 standard deviation.", "", "The values at the bottom of the graph are the probes that map to this gene for this dataset's platform. If they are in red the probes multi-map to other genes.", "", "The green and blue lines are the *dataset's* median expression value and detection threshold respectively."], "title": "Bar Graph", "width": 800, "attachTo": "div.graph_bar", "position": 11, "css": {".guiders_description img": {"float": "left"}, ".guiders_description ol": {"margin-left": "180px"}}}, {"description": ["The default graph type is a box plot.  It displays the expression data of the gene's probes grouped by the Sample Type.", "", "![plus](/help/images/box.png)", "", "1. Probe and Sample Type's maximum expression value.", "2. 3rd quartile.", "3. Probe and Sample Type's median expression value.", "4. 1st quartile.", "5. Probe and Sample Type's minimum expression value.", "", "The values at the bottom of the graph are the probes that map to this gene for this dataset's platform. If they are in red the probes multi-map to other genes.", "", "The green and blue lines are the *dataset's* median expression value and detection threshold respectively."], "title": "Boxplot Graph", "width": 900, "attachTo": "div.graph_box", "position": 11, "css": {".guiders_description img": {"float": "left"}, ".guiders_description ol": {"margin-left": "180px"}}}, {"description": ["The line graph displays the expression data grouped by time and a grouping specified by the annotator.", "The members of the group are then connected by a line across the time x-axis using a unique colour.", "Normally, multiple Sample Types might be grouped together in the Line Graph Group to show the overall profile by time. Probes at the bottom are red if they multi-map to other genes", "", "![plus](/help/images/line.png)", "", "1. Error bars representing +/- 1 standard deviation as two samples of the same Line Graph Group are at the same time point eg. Two hESC samples at Day 0.", "2. Mean expression value for the aggregated probe, Line Graph Group and time", "3. Line Graph Group over time that has the one colour and multiple samples per timepoint.", "", "The green and blue lines are the *dataset's* median expression value and detection threshold respectively."], "title": "Line Graph", "width": 1000, "attachTo": "div.graph_line", "position": 11, "css": {".guiders_description img": {"float": "left"}, ".guiders_description ol": {"margin-left": "180px"}}}]}</div>
+  
+	
+    
+<div class="guider multiview" id="multiview_0" style="width: 500px; display: none; position: fixed; top: 349.222px; left: 952.333px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Multiview</h1>        <div class="guiders_description"><p>This is the Multiview page.  It shows the expression graph for four different datasets side by side.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a></div>    </div>    <div class="guiders_arrow"></div></div><div id="guiders_overlay" style="display: none;"></div><div class="guider multiview" id="multiview_1" style="width: 500px; display: none; position: fixed; top: 333.222px; left: 952.333px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Search Results</h1>        <div class="guiders_description"><p>If you see the gene you want straight away, just click on it.  Otherwise, use the filter field to narrow them down first.</p>
+<p><strong>Click on a gene now to continue.</strong></p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow"></div></div><div class="guider multiview" id="multiview_2" style="width: 500px; display: none; position: absolute; top: 261.467px; left: 30px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title" style="margin-bottom: 0px;"></h1>        <div class="guiders_description"><p>Use this button to change which four datasets are currently displayed.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow guiders_arrow_up" style="left: 21px;"></div></div><div class="guider multiview" id="multiview_3" style="width: 500px; display: none; position: absolute; top: 264.133px; left: 290.667px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title" style="margin-bottom: 0px;"></h1>        <div class="guiders_description"><p>You can also change the selected gene by using the search box.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow guiders_arrow_up" style="left: 21px;"></div></div><div class="guider multiview" id="multiview_4" style="width: 500px; display: none; position: fixed; top: 333.222px; left: 952.333px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Tutorial Complete!</h1>        <div class="guiders_description"><p>Well done.  You have completed the tutorial.</p>
+<p>If you need help on the expression graph do <a href="http://www.stemformatics.org/contents/index#tutorial=gene_expression_graph">this</a> tutorial. Other tutorials can be found using the help icon at the top of the page</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow"></div></div><div class="guider page_guide" id="page_guide_0" style="width: 500px; display: none; position: absolute; top: -82.8px; left: 30px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Change Datasets</h1>        <div class="guiders_description"><p>This allows you to select a different dataset.</p>
+<p>You can filter through the datasets by the search box at the top.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a></div>    </div>    <div class="guiders_arrow guiders_arrow_down" style="left: 21px;"></div></div><div class="guider page_guide" id="page_guide_1" style="width: 500px; display: none; position: absolute; top: 549.833px; left: -554.8px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Movable Legend</h1>        <div class="guiders_description"><p>This legend is movable. Simply left click and hold your mouse within the grey area and then move your mouse.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow guiders_arrow_right" style="top: 79.1667px;"></div></div><div class="guider page_guide" id="page_guide_2" style="width: 500px; display: none; position: fixed; top: 333.222px; left: 952.333px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Gene Search</h1>        <div class="guiders_description"><p>If you wish to change the current gene, start typing in here and after 4 characters are entered a dropdown appears with genes matching the search.  Use the mouse or arrow keys to select a gene, or just keep typing and press enter or click the change gene button to the right.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow"></div></div><div class="guider page_guide" id="page_guide_3" style="width: 500px; display: none; position: absolute; top: 100.2px; left: 97.6667px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Export and Share Menu</h1>        <div class="guiders_description"><p>This allows you to export graph data and share with other users that have access to this dataset.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow guiders_arrow_down" style="left: 21px;"></div></div><div class="guider page_guide" id="page_guide_4" style="width: 300px; display: none; position: absolute; top: 36.1667px; left: 492.258px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Graph Options Menu</h1>        <div class="guiders_description"><p>Click here to show the Graph Options menu.  This is where you can switch graph types, as well as some other graph specific options.</p>
+<p>Toggle Automatic Minimum Y axis automatically calculates the y axis to reduce the y axis range.  Expand Graph Horizontally allows the width to be expanded to see large amounts of data more easily.</p>
+<p>Some datasets also allow you to group by other metadata eg. Disease State. If that is the case, you will see a Group By Disease State option.</p>
+<p><em>Note:</em> The show graph data option adds a table to the bottom of the page loaded with the data.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow guiders_arrow_left" style="top: 295.167px;"></div></div><div class="guider page_guide" id="page_guide_5" style="width: 350px; display: none; position: absolute; top: 216.167px; left: 33.0542px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Analysis Menu</h1>        <div class="guiders_description"><p>Click here to show the Analysis menu.</p>
+<p>There is only one option, the Yugene Interactive Graph. This allows you to view the expression profile for all available datasets for a single gene.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow guiders_arrow_right" style="top: 115.167px;"></div></div><div class="guider page_guide" id="page_guide_6" style="width: 500px; display: none; position: fixed; top: 333.222px; left: 952.333px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Breadcrumb Links</h1>        <div class="guiders_description"><p>This is a list of all the options that have been selected to get you to this page.</p>
+<p>You can click on the underlined links to go back to that option.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow"></div></div><div class="guider page_guide" id="page_guide_7" style="width: 500px; display: none; position: absolute; top: 124.2px; left: 963.646px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Help Menu</h1>        <div class="guiders_description"><p>Click here to toggle this help.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow guiders_arrow_down" style="left: 21px;"></div></div><div class="guider page_guide" id="page_guide_8" style="width: 500px; display: none; position: absolute; top: 52.2px; left: 612.146px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Genome Menu</h1>        <div class="guiders_description"><p>Click here to show the Genome menu.</p>
+<p>This allows you to see the UCSC Genome Browser. If you are logged in, you can also see tracks that are linked to your account.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow guiders_arrow_down" style="left: 21px;"></div></div><div class="guider page_guide" id="page_guide_9" style="width: 650px; display: none; position: fixed; top: 269.222px; left: 877.333px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Legend</h1>        <div class="guiders_description"><p>This is the legend of the list of groupings for this graph.</p>
+<p>For the Boxplot and Bar graph the labels shown are the Sample types for this dataset.</p>
+<p>For the Scatterplot the labels shown are the probes that map to this gene.</p>
+<p>For the Line graph the labels shown are the groups that were created to show tendencies across time.</p>
+<p>Some datasets also allow you to group by other metadata eg. Disease State. If that is selected, you will see compound labels of Sample type + Disease State. eg. hONS control or fibroblast Parkinsons</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow"></div></div><div class="guider page_guide" id="page_guide_10" style="width: 500px; display: none; position: absolute; top: 76.2px; left: 814.604px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Info Menu</h1>        <div class="guiders_description"><p>Click here to show the Info menu. It includes details of this gene and associated links and also the link to the Stemformatics Data Methods PDF.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow guiders_arrow_down" style="left: 21px;"></div></div><div class="guider page_guide" id="page_guide_11" style="width: 500px; display: none; position: absolute; top: 264.133px; left: 320px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Gene Search</h1>        <div class="guiders_description"><p>This allows you to change the gene for this dataset. If you type in four letters or more an autocomplete function will be provided.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow guiders_arrow_up" style="left: 253.167px;"></div></div><div class="guider page_guide" id="page_guide_12" style="width: 800px; display: none; position: fixed; top: 247.222px; left: 802.333px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Scatter Graph</h1>        <div class="guiders_description"><p>The scatter graph has a different structure than the other two graph types.  Here the samples are on the x axis and the colours represent the probes.</p>
+<p><img src="./Stemformatics Graphs - Multi Dataset Result_files/scatter.png" alt="plus" style="float: left;"></p>
+<ol style="margin-left: 180px;">
+<li>Points are normally individual readings from the given probe and sample.</li>
+<li>Where technical replicates are available however, the points are an average of the replicates with the bars representing their standard deviation.</li>
+</ol>
+<p>You can mouse over the points on the graph to show their sample id (also called replicate group ID).</p>
+<p>The black values at the bottom of the graph are the Sample Types for this dataset.</p>
+<p>The green and blue lines are the <em>dataset's</em> median expression value and detection threshold respectively.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow"></div></div><div class="guider page_guide" id="page_guide_13" style="width: 800px; display: none; position: fixed; top: 257.889px; left: 802.333px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Bar Graph</h1>        <div class="guiders_description"><p>The bar graph displays the expression data of the gene's probes grouped by the Sample Type.</p>
+<p><img src="./Stemformatics Graphs - Multi Dataset Result_files/bar.png" alt="plus" style="float: left;"></p>
+<ol style="margin-left: 180px;">
+<li>Mean expression value for the probe and Sample Type.</li>
+<li>Error bars representing +/- 1 standard deviation.</li>
+</ol>
+<p>The values at the bottom of the graph are the probes that map to this gene for this dataset's platform. If they are in red the probes multi-map to other genes.</p>
+<p>The green and blue lines are the <em>dataset's</em> median expression value and detection threshold respectively.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow"></div></div><div class="guider page_guide" id="page_guide_14" style="width: 900px; display: none; position: absolute; top: -177.8px; left: 117.667px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Boxplot Graph</h1>        <div class="guiders_description"><p>The default graph type is a box plot.  It displays the expression data of the gene's probes grouped by the Sample Type.</p>
+<p><img src="./Stemformatics Graphs - Multi Dataset Result_files/box.png" alt="plus" style="float: left;"></p>
+<ol style="margin-left: 180px;">
+<li>Probe and Sample Type's maximum expression value.</li>
+<li>3rd quartile.</li>
+<li>Probe and Sample Type's median expression value.</li>
+<li>1st quartile.</li>
+<li>Probe and Sample Type's minimum expression value.</li>
+</ol>
+<p>The values at the bottom of the graph are the probes that map to this gene for this dataset's platform. If they are in red the probes multi-map to other genes.</p>
+<p>The green and blue lines are the <em>dataset's</em> median expression value and detection threshold respectively.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow guiders_arrow_down" style="left: 21px;"></div></div><div class="guider page_guide" id="page_guide_15" style="width: 1000px; display: none; position: fixed; top: 249.889px; left: 702.333px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Line Graph</h1>        <div class="guiders_description"><p>The line graph displays the expression data grouped by time and a grouping specified by the annotator.
+The members of the group are then connected by a line across the time x-axis using a unique colour.
+Normally, multiple Sample Types might be grouped together in the Line Graph Group to show the overall profile by time. Probes at the bottom are red if they multi-map to other genes</p>
+<p><img src="./Stemformatics Graphs - Multi Dataset Result_files/line.png" alt="plus" style="float: left;"></p>
+<ol style="margin-left: 180px;">
+<li>Error bars representing +/- 1 standard deviation as two samples of the same Line Graph Group are at the same time point eg. Two hESC samples at Day 0.</li>
+<li>Mean expression value for the aggregated probe, Line Graph Group and time</li>
+<li>Line Graph Group over time that has the one colour and multiple samples per timepoint.</li>
+</ol>
+<p>The green and blue lines are the <em>dataset's</em> median expression value and detection threshold respectively.</p>
+</div>        <div class="guiders_buttons_container"><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow"></div></div><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul></body></html>
