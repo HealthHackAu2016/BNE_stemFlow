@@ -2,82 +2,136 @@
 import React from "react";
 import * as d3 from 'd3';
 // import multiview from './javaScript/multiview.js'
+import LazyLoad from 'react-lazy-load';
+import Waypoint from 'react-waypoint';
 
 
-const multiview = (divID) => {
-    var options = setup_data("#" + divID);
-    //  init(options);
-    var name = divID + "-wrapper"
-    var scale_x = 0.3;
-    var scale_y = 0.3;
-
-   // options.scale_x = scale_x;
-   // options.scale_y = scale_y;
-
-   var listSVG = d3.select("#" + name).selectAll('div')
-           .append('svg')
-           .attr('id', 'listSVG');
-
-   var gSVG = listSVG.append("g")
-           .attr("id", name)
-           .attr("transform", "scale(" + scale_x + "," + scale_y + ")")
-           // .on("contextmenu", d3.contextMenu(menu));
-
-    gSVG.append('svg').attr('id', name);
-    // inject SVG graph into dom elemenet
-    init(options);
-}
-
-
-
-class Graph extends React.Component {
-
-    render() {
-        console.log("Rendering: #" + this.props.id);
-        return (
-            <div id={this.props.id} />
-        );
-    }
-}
-
-
-
+const MAXNUMGRAPHS = 12;
 
 class App extends React.Component {
 
-    componentDidMount() {
+    constructor(props) {
+        super(props);
+        this.state = {
+            numGraphs: 1,
+        };
+    }
 
+    _handleWaypointEnter() {
+        console.log("entered waypoint");
+        if (this.state.numGraphs === MAXNUMGRAPHS) {
+            return null
+        }
+
+        console.log("Loading graph: g" + this.state.numGraphs);
+
+        try {
+            this.setState({
+                numGraphs: this.state.numGraphs + 1
+            })
+            multiview('g' + this.state.numGraphs)
+        } catch (e) {
+            console.log("MULTIVIEW DRAWING ERROR:");
+            console.log(e);
+            // try drawy again, maybe dom element is there by now
+            multiview('g' + this.state.numGraphs)
+        }
+
+        // try load 2nd and 3rd graph at the same time,
+        this._loadColumn2Graph()
+        this._loadColumn3Graph()
+
+    }
+
+
+    _loadColumn2Graph() {
+        this.setState({
+            numGraphs: this.state.numGraphs + 1
+        })
+        console.log("Loading graph: g" + this.state.numGraphs);
+        multiview('g' + this.state.numGraphs)
+    }
+
+    _loadColumn3Graph() {
+        this.setState({
+            numGraphs: this.state.numGraphs + 1
+        })
+        console.log("Loading graph: g" + this.state.numGraphs);
+        multiview('g' + this.state.numGraphs)
+    }
+
+
+    _handleWaypointLeave() {
+        console.log("left waypoint");
+    }
+
+    _handleClick() {
+        this.setState({
+            numGraphs: this.state.numGraphs + 1
+        })
+        console.log("Loading graph: g" + this.state.numGraphs);
+        multiview('g' + this.state.numGraphs)
+    }
+
+    componentDidMount() {
+        // something weird about d3, can't load graphs simultaneously
+        // load 1 graph at first, lazy load others as ajax calls complete
         multiview('g1')
-        multiview('g2')
-        multiview('g3')
-        multiview('g4')
-        multiview('g5')
-        multiview('g6')
     }
 
     render() {
-        let divStyle = {
+        let divColumnStyle = {
             float: 'left',
-            width: '800px',
-            height: '400px',
+            width: '30%',
+            height: '30%',
+        }
+        let divEven = {
+            background: '#f9ebe5',
+            padding: '160px',
+            height: '950px',
+        }
+        let divOdd = {
+            background: '#f0cec0',
+            padding: '160px',
+            height: '950px',
         }
         return (
             <div>
-                <h1>React: STEMFLOW</h1>
-                <div id="column1" style={divStyle}>
-                    <Graph id="g1"/>
-                    <Graph id="g2"/>
-                    <Graph id="g3"/>
+
+                <button onClick={this._handleClick.bind(this)}>
+                    Click here to load GENES
+                </button>
+
+                <br/>
+                <div id="column1" style={divColumnStyle}>
+                    <div id="g1" style={divEven}>graph1 placeholder</div>
+                    <Waypoint onEnter={this._handleWaypointEnter.bind(this)}
+                        onLeave={this._handleWaypointLeave} />
+
+                    <div id="g4" style={divOdd}>graph4 placeholder</div>
+                    <Waypoint onEnter={this._handleWaypointEnter.bind(this)}
+                        onLeave={this._handleWaypointLeave} />
+
+                    <div id="g7" style={divEven}>graph7 placeholder</div>
+                    <Waypoint onEnter={this._handleWaypointEnter.bind(this)}
+                        onLeave={this._handleWaypointLeave} />
+
+                    <div id="g10" style={divEven}>graph7 placeholder</div>
+                    <Waypoint onEnter={this._handleWaypointEnter.bind(this)}
+                        onLeave={this._handleWaypointLeave} />
+
                 </div>
-                <div id="column2" style={divStyle}>
-                    <Graph id="g4"/>
-                    <Graph id="g5"/>
-                    <Graph id="g6"/>
+                <div id="column2" style={divColumnStyle}>
+                    <div id="g2" style={divOdd}>graph2 placeholder</div>
+                    <div id="g5" style={divEven}>graph5 placeholder</div>
+                    <div id="g8" style={divOdd}>graph8 placeholder</div>
+                    <div id="g11" style={divOdd}>graph8 placeholder</div>
                 </div>
-                <div id="column3" style={divStyle}>
-                    <div id="g7"></div>
-                    <div id="g8"></div>
-                    <div id="g9"></div>
+                <div id="column3" style={divColumnStyle}>
+                    <div id="g3" style={divEven}>graph3 placeholder</div>
+                    <div id="g6" style={divOdd}>graph6 placeholder</div>
+                    <div id="g9" style={divEven}>graph9 placeholder</div>
+                    <div id="g12" style={divEven}>graph9 placeholder</div>
                 </div>
             </div>
         );
