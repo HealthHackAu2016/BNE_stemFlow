@@ -13,16 +13,19 @@ var multiview = function (divID) {
     var scale_x = 1;
     var scale_y = 1;
 
+var menu = define_menu();
     var listSVG = d3.select("#" + divID)
             .append('svg')
             .attr('id', 'listSVG');
     
             var gSVG = listSVG.append("g")
                     .attr("id", name)
-            .attr("transform", "scale(" + scale_x + "," + scale_y +")");
+            .attr("transform", "scale(" + scale_x + "," + scale_y +")")
+            .on("contextmenu", d3.contextMenu(menu));
 
   //gSVG.append('svg').attr('id', name);
     // inject SVG graph into dom elemenet
     init(setup_data("#" + divID));
+  
 
 }
