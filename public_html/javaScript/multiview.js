@@ -10,8 +10,8 @@ var multiview = function (divID) {
   //  init(options);
   var name = divID + "-wrapper";
   var name_html_search = "#" + name;
-    var scale_x = 0.3;
-    var scale_y = 0.3;
+    var scale_x = 1;
+    var scale_y = 1;
 
     var listSVG = d3.select("#" + divID)
             .append('svg')
@@ -23,6 +23,6 @@ var multiview = function (divID) {
 
   //gSVG.append('svg').attr('id', name);
     // inject SVG graph into dom elemenet
-    init(setup_data(name_html_search));
+    init(setup_data("#" + divID));
 
 }
