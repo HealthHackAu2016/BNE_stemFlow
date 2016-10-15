@@ -1,5 +1,14 @@
 #!/usr/bin/python
+import sys
+import cgi
+import boto3
 import mysql.connector
+
+form = cgi.FieldStorage()
+
+print(form["filter"])
+
+sys.exit()
 
 conn = mysql.connector.connect(
     user='root', 
@@ -29,9 +38,20 @@ for row in curdata:
     f.write(str(fields))
     
    
-f.close()
+
 
 curcol.close()
 curdata.close()
 
 conn.close()
+
+client = boto3.client('s3')
+
+response = client.put_object(
+    Body = f,
+    Bucket = "stemflows3-s3bucket-xong7o21f9ih",
+    Key = "data/"
+)
+    
+
+f.close()
