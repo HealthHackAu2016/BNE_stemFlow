@@ -12,24 +12,37 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="Graph/css/biojs-vis-scatter-plot.css">
    </head>
     <body>
-        <div id = "main" ></div>  
-    <script src="//d3js.org/d3.v3.min.js"></script>
-    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://cdn.rawgit.com/eligrey/Blob.js/0cef2746414269b16834878a8abc52eb9d53e6bd/Blob.js"></script>
-    <script src="Graph/examples/many_samples_large.js"></script>
-    <script src="Graph/lib/features.js"></script>
-    <script src="Graph/lib/axis.js"></script>
-    <script src="Graph/lib/box_bar_line.js"></script>
-    <script src="Graph/lib/general.js"></script>
-    <script src="Graph/lib/index.js"></script>
-        <div> Mock graphing tool for Stemflow to use for testing purposes
-            <br>
-            see ReadME for details </div> 
+        <!-- <div id="root"> </div> -->
+
+        <div id = "main" ></div>
+        <script src="//d3js.org/d3.v3.min.js"></script>
+        <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/eligrey/Blob.js/0cef2746414269b16834878a8abc52eb9d53e6bd/Blob.js"></script>
+
+        <script src="Graph/examples/many_samples_large.js"></script>
+        <script src="Graph/lib/features.js"></script>
+        <script src="Graph/lib/axis.js"></script>
+        <!-- <script src="Graph/lib/box_bar_line.js"></script> -->
+        <script src="Graph/lib/general.js"></script>
+        <script src="Graph/lib/index.js"></script>
         <script>
             //Call with the id of te element within which we want to create it
-            options = setup_data("#main");
-            init(options); 
-            </script>
+            //
+            var width = 10
+            var height = 10
+
+            var listSVG = d3.select('#main')
+                .append('svg')
+                .attr('id', 'listSVG')
+
+            var gSVG = d3.select('#listSVG').append("g")
+                .attr("transform", "translate(" + width + "," + height + ")");
+
+            gSVG.append('svg') .attr('id', 'unitSVG')
+            // inject SVG graph into dom elemenet
+            init(setup_data("#unitSVG"));
+
+        </script>
     </body>
 </html>
