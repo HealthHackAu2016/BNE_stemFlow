@@ -6,26 +6,29 @@
 
 //Call with the id of te element within which we want to create it
 var multiview = function (divID) {
-   // options = setup_data(divID);
-  //  init(options);
-  var name = divID + "-wrapper";
-  var name_html_search = "#" + name;
-    var scale_x = 1;
-    var scale_y = 1;
-
-var menu = define_menu();
-    var listSVG = d3.select("#" + divID)
-            .append('svg')
-            .attr('id', 'listSVG');
+    var options = setup_data("#" + divID);
+    //  init(options);
+//    var name = divID + "-wrapper";
+//    var name_html_search = "#" + name;
+    var scale_x = 0.3;
+    var scale_y = 0.3;
     
-            var gSVG = listSVG.append("g")
-                    .attr("id", name)
-            .attr("transform", "scale(" + scale_x + "," + scale_y +")")
-            .on("contextmenu", d3.contextMenu(menu));
+   // options.scale_x = scale_x;
+  //  options.scale_y = scale_y;
+    
+   var menu = define_menu();
+//    var listSVG = d3.select("#" + name)
+//            .append('svg')
+//            .attr('id', 'listSVG');
+//
+//    var gSVG = listSVG.append("g")
+//            .attr("id", name)
+//            .attr("transform", "scale(" + scale_x + "," + scale_y + ")")
+//            .on("contextmenu", d3.contextMenu(menu));
 
-  //gSVG.append('svg').attr('id', name);
+    //gSVG.append('svg').attr('id', name);
     // inject SVG graph into dom elemenet
-    init(setup_data("#" + divID));
-  
+    init(options, scale_x, scale_y, menu);
+
 
 }

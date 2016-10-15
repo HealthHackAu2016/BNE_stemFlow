@@ -137,7 +137,9 @@
                 .attr("height", full_height)
                 .append("g")
                 // this is just to move the picture down to the right margin length
-                .attr("transform", "translate(" + page_options.margin.left + "," + page_options.margin.top + ")");
+                .attr("transform", "translate(" + page_options.margin.left + "," + page_options.margin.top + ")" + " scale(" +0.3 + "," + 0.3 + ")")
+//                .attr("transform", "scale(" + options.scaleGroupX + "," + options.scaleGroupY + ")");
+//                .on("contextmenu", d3.contextMenu(options.menu));
 
 
         // this is to add a background color

@@ -301,8 +301,10 @@ var biojsvisscatterplot;
     }
 
     setup_graph = function (graph) {
+        
         // setup all the graph elements
         options = graph.options;
+
         graph = setup_margins(graph); 
         graph = set_data_order(graph);
         //graph =  setup_size_options(graph);
@@ -346,13 +348,17 @@ var biojsvisscatterplot;
     };  // end setup_graph
 
     // run this right at the start of the initialisation of the class
-    init = function (options) {
+    init = function (options, scale_x, scale_y, menu) {
 //        var options = default_options();
 //        options = init_options;
         page_options = {}; // was new Object() but jshint wanted me to change this
         //size_options = {};
         var graph = {}; // this is a new object
+        options.menu = menu;
+        options.scaleGroupX= scale_x;
+        options.scaleGroupY = scale_y;
         graph.options = options;
+        
         graph = preprocess_lines(graph);
         graph = setup_graph(graph);
        // var target = $(options.target);
