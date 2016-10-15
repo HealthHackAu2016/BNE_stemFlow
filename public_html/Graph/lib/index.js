@@ -313,9 +313,7 @@ var biojsvisscatterplot;
         //Modular In axis.js
         graph = setup_x_axis(graph, graph.sample_id_list);
 	    // If the user wants labels we need to append the labels to the graph
-        if (options.display.x_axis_labels === "yes") {
             graph = setup_x_axis_labels(graph, graph.sample_id_list, 0, ".sample_type_text", ".sample-type-");
-        }
         graph = setup_y_axis(graph);
         // In general.js
         if (options.display.legend  === "yes") {

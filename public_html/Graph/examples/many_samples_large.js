@@ -155,7 +155,7 @@ setup_data = function (svgID) {
             // reducing. Number of increments is how many numbers are displayed on the y axis. For none to
             // be displayed multiply by 0
             // Note it defaults to having 10 ticks
-            display: {hoverbars: "yes", error_bars: "yes", legend: "yes", horizontal_lines: "yes", legend_hover: "no", vertical_lines: "yes", x_axis_labels: "yes", y_axis_title: "yes", horizontal_grid_lines: "yes"},
+            display: {hoverbars: "yes", error_bars: "yes", legend: "yes", horizontal_lines: "yes", legend_hover: "no", vertical_lines: "yes", x_axis_labels: "no", y_axis_title: "yes", horizontal_grid_lines: "yes"},
             circle_radius: 2, // for the scatter points
             hover_circle_radius: 10,
             /*********** End of sizing options **********************************/

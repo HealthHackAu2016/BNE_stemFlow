@@ -9,30 +9,19 @@ var multiview = function (divID) {
    // options = setup_data(divID);
   //  init(options);
   var name = divID + "-wrapper";
-  var name_html_search = "#" + divID;
-    var width = 1
-    var height = 1
-    var scale_x = 0.33
-    var scale_y = 0.33
+  var name_html_search = "#" + name;
+    var scale_x = 0.3;
+    var scale_y = 0.3;
 
-    var listSVG = d3.select(divID)
+    var listSVG = d3.select("#" + divID)
             .append('svg')
-            .attr('id', 'listSVG')
-            .attr('height', '1000px')
-            .attr('width', '1000px')
+            .attr('id', 'listSVG');
+    
+            var gSVG = listSVG.append("g")
+                    .attr("id", name)
+            .attr("transform", "scale(" + scale_x + "," + scale_y +")");
 
-
-    var svgTranslate = `
-            scale(${scale_x}, ${scale_y})
-            `
-
-            var gSVG = d3.select('#listSVG').append("g")
-            .attr("transform", svgTranslate)
-
-    // [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16].map(function() {
-    //
-    // })
-    gSVG.append('svg').attr('id', name)
+  //gSVG.append('svg').attr('id', name);
     // inject SVG graph into dom elemenet
     init(setup_data(name_html_search));
 

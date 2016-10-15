@@ -251,8 +251,12 @@
                         function (d) {
                             // If the user does't want to have labels on the x axis we don't append the
                             // smaple type
+                            if (options.display.x_axis_labels === "yes") {
                             var temp = get_type(d);
                             return temp;
+                        } else {
+                            return " ";
+                        }
                         }
                 )
                 .attr("class", "x_axis_diagonal_labels")
