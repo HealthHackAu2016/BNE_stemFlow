@@ -11,8 +11,15 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="Graph/css/biojs-vis-scatter-plot.css">
    </head>
+   
+   
     <body>
-        <div id = "main" ></div>  
+    <div id="columnleft" style="float: left; width: 400px;">
+        hello
+    </div>
+    <div id="columnright" style="float: left; width: 400px;">
+        hello
+   </div>
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -26,10 +33,23 @@ and open the template in the editor.
         <div> Mock graphing tool for Stemflow to use for testing purposes
             <br>
             see ReadME for details </div> 
-        <script>
-            //Call with the id of te element within which we want to create it
-            options = setup_data("#main");
-            init(options); 
-            </script>
     </body>
+<!--    <script>
+            //Call with the id of te element within which we want to create it
+            options1 = setup_data("#topboxl");
+            init(options1); 
+            </script>
+    <script>
+            options2 = setup_data("#botboxl");
+            init(options2); 
+            </script>
+    <script>
+            options3 = setup_data("#topboxr");
+            init(options3); 
+            </script>
+    <script>
+            options4 = setup_data("#botboxr");
+            init(options4); 
+            </script>-->
+
 </html>
