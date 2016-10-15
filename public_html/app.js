@@ -7,7 +7,8 @@ import LazyLoad from 'react-lazy-load';
 import Waypoint from 'react-waypoint';
 
 
-const MAXNUMGRAPHS = 12;
+const MAXNUMGRAPHS = 13;
+
 
 class App extends React.Component {
 
@@ -20,7 +21,7 @@ class App extends React.Component {
 
     _handleWaypointEnter() {
         console.log("entered waypoint");
-        if (this.state.numGraphs === MAXNUMGRAPHS) {
+		if (this.state.numGraphs >= MAXNUMGRAPHS) {
             return null
         }
 
@@ -29,18 +30,34 @@ class App extends React.Component {
             this.setState({
                 numGraphs: this.state.numGraphs + 1
             })
-			console.log("Loading graph: g" + this.state.numGraphs);
+            console.log("Loading graph: g" + this.state.numGraphs);
             multiview('g' + this.state.numGraphs)
         } catch (e) {
             console.log("MULTIVIEW DRAWING ERROR:");
             console.log(e);
-            // try drawy again, maybe dom element is there by now
+            // try draw again, maybe dom element is there by now
             multiview('g' + this.state.numGraphs)
         }
 
         // try load 2nd and 3rd graph at the same time,
-        this._loadColumn2Graph()
-        this._loadColumn3Graph()
+        try {
+            this._loadColumn2Graph()
+        } catch (e) {
+            console.log("MULTIVIEW DRAWING ERROR:");
+            console.log(e);
+            // try draw again, maybe dom element is there by now
+            this._loadColumn2Graph()
+        }
+        try {
+            this._loadColumn3Graph()
+        } catch (e) {
+            console.log("MULTIVIEW DRAWING ERROR:");
+            console.log(e);
+            // try draw again, maybe dom element is there by now
+            this._loadColumn3Graph()
+        }
+
+
 
     }
 
