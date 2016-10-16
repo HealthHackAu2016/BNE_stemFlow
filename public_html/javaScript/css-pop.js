@@ -9,8 +9,12 @@ function toggle(div_id) {
 	if ( el.style.display == 'none' ) {
             el.style.display = 'block';
             var graphdiv = document.getElementById("g1");
-            var svgdiv = document.getElementById("g1-svg");
-            svgdiv.setAttribute("transform", "scale(" + 3 + "," + 3 + ")");
+            graphdiv.setAttribute("width", "1000px");
+            var svgdiv = d3.select("#g1-svg")
+                    .attr("width", 1000)
+                    .attr("height", 1000);
+            var groupdiv = d3.select("#g1-group")
+                .attr("transform", "translate(" + 100 + "," + 100 + ")" + " scale(" + 1.5 + "," + 1.5 + ")")
             el.appendChild(graphdiv);
         }
 	else {el.style.display = 'none';}
@@ -35,7 +39,7 @@ function blanket_size(popUpDivVar) {
 	blanket.style.height = blanket_height + 'px';
 	var popUpDiv = document.getElementById(popUpDivVar);
 	popUpDiv_height=blanket_height/2-400;//200 is half popup's height
-	popUpDiv.style.top = popUpDiv_height/2.5 + 'px';
+	popUpDiv.style.top = popUpDiv_height/3 + 'px';
 }
 function window_pos(popUpDivVar) {
 	if (typeof window.innerWidth != 'undefined') {
@@ -54,7 +58,7 @@ function window_pos(popUpDivVar) {
 	}
 	var popUpDiv = document.getElementById(popUpDivVar);
 	window_width=window_width/2-400;//200 is half popup's width
-	popUpDiv.style.left = window_width/1.25 + 'px';
+	popUpDiv.style.left = window_width/1.5 + 'px';
 }
 
 function popup(windowname) {

@@ -146,6 +146,7 @@
                 .attr("height", full_height)
                 .attr("id", idname + "-svg")
                 .append("g")
+                .attr("id", idname + "-group")
                 // this is just to move the picture down to the right margin length
                 .attr("transform", "translate(" + page_options.margin.left + "," + page_options.margin.top + ")" + " scale(" + scaleX + "," + scaleY + ")")
                 .attr("class", options.title_class)
