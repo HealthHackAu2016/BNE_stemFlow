@@ -26,9 +26,9 @@ function toggle(div_id) {
             
         }
 	else {
-            
-            //el.innerHTML = "";
-            //el.setAttribute("onclick", popup('popUpDiv'));
+            //var olddiv = document.getElementById(lastClickedGraph);
+            //olddiv.setInnerHTML(el.innerHTML);
+            el.innerHTML = "";
             el.style.display = 'none';
         }
 }
@@ -71,7 +71,7 @@ function window_pos(popUpDivVar) {
 	}
 	var popUpDiv = document.getElementById(popUpDivVar);
 	window_width=window_width/2-400;//200 is half popup's width
-	popUpDiv.style.left = window_width/2 + 'px';
+	popUpDiv.style.left = window_width + 'px';
 }
 
 function popup(windowname) {
