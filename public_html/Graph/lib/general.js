@@ -120,26 +120,7 @@
      * @returns {unresolved}
      */ 
     setup_svg = function (graph) {
- var menu = [
-        {
-            title: 'Item #1',
-            action: function (elm, d, i) {
-                console.log('Item #1 clicked!');
-                console.log('The data for this circle is: ' + d);
-            },
-            disabled: false // optional, defaults to false
-        },
-        {
-            title: 'Item #2',
-            action: function (elm, d, i) {
-                console.log('You have clicked the second item!');
-                console.log('The data for this circle is: ' + d);
-            }
-        }
-    ]       
-        
-        
-        options = graph.options;
+ options = graph.options;
         page_options = graph.page_options;
         full_width = page_options.full_width;
         full_height = page_options.full_height;
@@ -163,6 +144,7 @@
         var svg = d3.select(options.target).append("svg")
                 .attr("width", full_width)
                 .attr("height", full_height)
+                .attr("id", options.target + "-svg")
                 .append("g")
                 // this is just to move the picture down to the right margin length
                 .attr("transform", "translate(" + page_options.margin.left + "," + page_options.margin.top + ")" + " scale(" + scaleX + "," + scaleY + ")")

@@ -8,7 +8,9 @@ function toggle(div_id) {
 	var el = document.getElementById(div_id);
 	if ( el.style.display == 'none' ) {
             el.style.display = 'block';
-            multiview(div_id);
+            var graphdiv = document.getElementById("g1");
+            //var svgdiv = document.get
+            el.appendChild(graphdiv);
         }
 	else {el.style.display = 'none';}
 }
@@ -31,7 +33,7 @@ function blanket_size(popUpDivVar) {
 	var blanket = document.getElementById('blanket');
 	blanket.style.height = blanket_height + 'px';
 	var popUpDiv = document.getElementById(popUpDivVar);
-	popUpDiv_height=blanket_height/2-200;//200 is half popup's height
+	popUpDiv_height=blanket_height/2-400;//200 is half popup's height
 	popUpDiv.style.top = popUpDiv_height/2.5 + 'px';
 }
 function window_pos(popUpDivVar) {
@@ -50,9 +52,10 @@ function window_pos(popUpDivVar) {
 		}
 	}
 	var popUpDiv = document.getElementById(popUpDivVar);
-	window_width=window_width/2-200;//200 is half popup's width
+	window_width=window_width/2-400;//200 is half popup's width
 	popUpDiv.style.left = window_width/1.25 + 'px';
 }
+
 function popup(windowname) {
 	blanket_size(windowname);
 	window_pos(windowname);
