@@ -71,6 +71,8 @@ setup_data = function (svgID) {
     var tmpname = svgID.split("#")[1];
     var graphnum = parseInt(svgID.split("g")[1]);
     console.log(graphnum);
+    //Want to check if the data is cacged or not
+    
     if (graphnum % 2 == 0) {
         data_url = 'Graph/data/test.tsv';
     } else {
@@ -168,7 +170,7 @@ setup_data = function (svgID) {
             legend_padding: 50,
             height: 400,
             width: 600,
-            margin: {top: 50, left: 100, bottom: 20, right: 20},
+            margin: {top: 50, left: 20, bottom: 0, right: 0},
             initial_padding: 10,
             x_axis_label_padding: 10, //padding for the x axis labels (how far below the graph)
             text_size: "12px",
