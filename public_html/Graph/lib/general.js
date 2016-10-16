@@ -144,8 +144,9 @@
         var svg = d3.select(options.target).append("svg")
                 .attr("width", full_width)
                 .attr("height", full_height)
-                .append("g")
                 .attr("id", idname + "-svg")
+                .append("g")
+                .attr("id", idname + "-group")
                 // this is just to move the picture down to the right margin length
                 .attr("transform", "translate(" + page_options.margin.left + "," + page_options.margin.top + ")" + " scale(" + scaleX + "," + scaleY + ")")
                 .attr("class", options.title_class)
