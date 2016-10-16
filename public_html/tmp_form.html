@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+    $("button").click(function(){
+    
+       var url = "http://stemflow.net/data/GATA3.tsv"
+        $.get(url)
+        .done(function() { 
+            document.getElementById('test').innerHTML = "yes";
+        }).fail(function() {
+        
+            var searchval = document.getElementById('geneSearch').value
+   
+  
+            $.post("https://gos15bzh4h.execute-api.ap-southeast-2.amazonaws.com/test",
+            {
+              //filter: document.getElementById('geneSearch').valu
+              filter: "GATA3,PDGFD"
+            },
+            function(data,status){
+                document.getElementById('test').innerHTML = status;
+            });
+        
+            //document.getElementById('test').innerHTML = "no";
+            
+        })
+
+
+});
+    
+</script>
+</head>
+<body>
+
+<form id="geneSearchForm" name="search" method="GET" action="query.py">
+    <input id="geneSearch" name="filter" class="mv ui-autocomplete-input" type="text" value="GATA3" autocomplete="off">
+</form>
+<button>Submit</button>
+
+<div id="test">
+PLACEHOLDER
+</div>
+
+</body>
+</html>
+
+
