@@ -6,9 +6,13 @@
 
 function toggle(div_id) {
 	var el = document.getElementById(div_id);
-	if ( el.style.display == 'none' ) {	el.style.display = 'block';}
+	if ( el.style.display == 'none' ) {
+            el.style.display = 'block';
+            multiview(div_id);
+        }
 	else {el.style.display = 'none';}
 }
+
 function blanket_size(popUpDivVar) {
 	if (typeof window.innerWidth != 'undefined') {
 		viewportheight = window.innerHeight/2;
