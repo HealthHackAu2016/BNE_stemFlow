@@ -1,14 +1,14 @@
 
     /**
      * Copyright 2016 Ariane Mora
-     * 
+     *
      * general.js contains a set of functions which are used by all the bioJS
      * modules in several tools. Such generic functions include creating the
      * SVG, setting up margins, generating defult options, setting up the water
      * mark, generating horizontal and vertical lines and titles.
      *
      */
- 
+
     /* this is just to define the options as defaults: added numberFormat*/
     default_options = function () {
 
@@ -103,8 +103,8 @@
             .html(function (d) {
                 //return d3.select(this);
             });
-            
-            
+
+
     set_data_order = function(graph) {
         if (options.sample_type_order !== "none") {
             options.data.sort(function(a, b) {
@@ -118,7 +118,7 @@
      * Sets up the SVG element
      * @param {type} graph
      * @returns {unresolved}
-     */ 
+     */
     setup_svg = function (graph) {
  options = graph.options;
         page_options = graph.page_options;
@@ -136,7 +136,7 @@
                 .html('')
                 .css('width', full_width + 'px')
                 .css('height', full_height + 'px');
-        
+
         var idname = options.target.split('#')[1];
         //svg.call(large_tip);
         // setup the SVG. We do this inside the d3.tsv as we want to keep everything in the same place
@@ -144,23 +144,27 @@
         var svg = d3.select(options.target).append("svg")
                 .attr("width", full_width)
                 .attr("height", full_height)
-                .attr("id", idname + "-svg")
                 .append("g")
+                .attr("id", idname + "-svg")
                 // this is just to move the picture down to the right margin length
                 .attr("transform", "translate(" + page_options.margin.left + "," + page_options.margin.top + ")" + " scale(" + scaleX + "," + scaleY + ")")
                 .attr("class", options.title_class)
-                        .on('mouseover', function() {
+                        .on('click', function() {
                       // var thissvg = d3.select(this);
                       // thissvg.attr("transform", "translate(" + 300 + "," + 300+ ")" + " scale(" + 3 + "," + 3 + ")");
                                     console.log("clicked!");
+									lastClickedGraph = idname
+									console.log("lastClickedGraph id: " + lastClickedGraph);
+                                    console.log(idname);
+
                                    // thissvg.call(options.tipLarge);
                                    // options.tipLarge.show;
                 })
                 .on("contextmenu", function() {
                     console.log("right clicked");
                             d3.contextMenu(menu);
-                });                        
-                
+                });
+
 
         // this is to add a background color
         // from: http://stackoverflow.com/questions/20142951/how-to-set-the-background-color-of-a-d3-js-svg
@@ -194,9 +198,9 @@
                 .on('mouseover', tip.show)
                 .on('mouseover', tip.hide);
 //                        .on('click', function() {
-//                            
+//
 //                       // d3.select()
-//               
+//
 //                                    console.log("clicked!titelllalal");
 //                })
 //                .on("contextmenu", function() {
@@ -351,7 +355,7 @@
         return value;
     };
 
- 
+
 
     /**
      * Draws the vertical line on the x axis from the calculated x value above
@@ -429,7 +433,7 @@
                 svg.call(tooltip_legend);
             }
         } else {
-	    // tip which is displayed when hovering over a collumn. Displays the sample type 
+	    // tip which is displayed when hovering over a collumn. Displays the sample type
 	    //of the collumn
 	    var tip_decoy = d3.tip()
     	    .attr('class', 'd3-tip');

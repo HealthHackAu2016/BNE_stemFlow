@@ -5,7 +5,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head> 
+    <head>
         <title>StemFlow</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +13,17 @@ and open the template in the editor.
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="javaScript/css-pop.js"></script>
     </head>
-    <body onload="popup('popUpDiv')">
+    <!-- <body onload="popup('popUpDiv')"> -->
+    <body>
         <div id="container" style="height: 3000px;">
             <div id="mainContent">
 
                 <div id="blanket" style="display:none;"></div>
                 <div id="popUpDiv" style="display:none;">
                     <a href="#" onclick="popup('popUpDiv')" >Click to Close CSS Pop Up</a>
-                </div>	
+                </div>
                 <a href="#" onclick="popup('popUpDiv')">Click to Open CSS Pop Up</a>
-                <!-- / POPUP-->     
+                <!-- / POPUP-->
                 <div id = "main" ></div>
                 <script src="//d3js.org/d3.v3.min.js"></script>
                 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
@@ -35,8 +36,8 @@ and open the template in the editor.
                 <!-- <script src="Graph/lib/box_bar_line.js"></script> -->
                 <script src="Graph/lib/general.js"></script>
                 <script src="Graph/lib/index.js"></script>
-                <script src="javaScript/multiview.js"></script> 
-                <script src="javaScript/zoomed.js"></script> 
+                <script src="javaScript/multiview.js"></script>
+                <script src="javaScript/zoomed.js"></script>
                 <div style="min-width: 3000px;">
                     <div style="float: left; max-width: 700px; max-height: 400px;">
                         <div id="g1"></div>
