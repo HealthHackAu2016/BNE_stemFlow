@@ -41,7 +41,7 @@ var biojsvisscatterplot;
 
 
 var lastClickedGraph = null;
-
+var lastClickedtoRemoveGraph = null;
     //setting up the line to append for each of the values (i.e. line between scatter points)
     //http://bl.ocks.org/d3noob/e99a762017060ce81c76 helpful for nesting the probes
     setup_scatter_line = function (graph) {

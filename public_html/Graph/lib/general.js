@@ -153,7 +153,7 @@ setup_svg = function (graph) {
             .on('click', function () {
                 // var thissvg = d3.select(this);
                 // thissvg.attr("transform", "translate(" + 300 + "," + 300+ ")" + " scale(" + 3 + "," + 3 + ")");
-                lastClickedGraph = idname
+                lastClickedGraph = idname;
                 console.log("lastClickedGraph id: " + lastClickedGraph);
                 popup('popUpDiv')
                 // thissvg.call(options.tipLarge);
@@ -161,7 +161,7 @@ setup_svg = function (graph) {
             })
             .on("contextmenu", function () {
                 console.log("right clicked");
-                d3.contextMenu(menu);
+                lastClickedtoRemoveGraph = idname;
             });
 
 

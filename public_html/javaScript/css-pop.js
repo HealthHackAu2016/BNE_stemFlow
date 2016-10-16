@@ -3,7 +3,8 @@
  * @param {type} div_id
  * @returns {undefined}
  */
-
+//Keeps track o0f how many graphs are in the div
+var numElements;
 function toggle(div_id) {
 	var el = document.getElementById(div_id);
 	if ( el.style.display == 'none' ) {
@@ -17,8 +18,14 @@ function toggle(div_id) {
             var groupdiv = d3.select("#" + lastClickedGraph + "-group")
                 .attr("transform", "translate(" + 100 + "," + 100 + ")" + " scale(" + 1.5 + "," + 1.5 + ")")
             el.appendChild(graphdiv);
+            numElements ++;
         }
-	else {el.style.display = 'none';}
+	else {
+            
+            //el.innerHTML = "";
+            //el.setAttribute("onclick", popup('popUpDiv'));
+            el.style.display = 'none';
+        }
 }
 
 function blanket_size(popUpDivVar) {
