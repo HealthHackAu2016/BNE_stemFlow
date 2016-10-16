@@ -6,19 +6,24 @@
 //Keeps track o0f how many graphs are in the div
 var numElements;
 function toggle(div_id) {
+        var scale = 1;
+        numElements ++;
+        var size = 800;
 	var el = document.getElementById(div_id);
+        el.setAttribute("height", size * numElements);
 	if ( el.style.display == 'none' ) {
             el.style.display = 'block';
             var svgid = lastClickedGraph;
             var graphdiv = document.getElementById(lastClickedGraph);
-            graphdiv.setAttribute("width", "1000px");
+            graphdiv.setAttribute("width", "800px");
             var svgdiv = d3.select("#" + lastClickedGraph + "-svg")
-                    .attr("width", 1000)
-                    .attr("height", 1000);
+                    .attr("width", size)
+                    .attr("height", size);
             var groupdiv = d3.select("#" + lastClickedGraph + "-group")
-                .attr("transform", "translate(" + 100 + "," + 100 + ")" + " scale(" + 1.5 + "," + 1.5 + ")")
+                .attr("transform", "translate(" + 100 + "," + 100 + ")" + " scale(" + 1 + "," + 1 + ")")
             el.appendChild(graphdiv);
-            numElements ++;
+            
+            
         }
 	else {
             
@@ -66,7 +71,7 @@ function window_pos(popUpDivVar) {
 	}
 	var popUpDiv = document.getElementById(popUpDivVar);
 	window_width=window_width/2-400;//200 is half popup's width
-	popUpDiv.style.left = window_width/1.5 + 'px';
+	popUpDiv.style.left = window_width/2 + 'px';
 }
 
 function popup(windowname) {
