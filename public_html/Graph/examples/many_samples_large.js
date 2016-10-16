@@ -7,6 +7,11 @@ function round_to_two_decimal_places(num) {
 
 var options;
 
+
+ 
+
+
+
 //An array of colours which are used for the different probes
 var colours = ["DarkOrchid", "Orange", "DodgerBlue", "Blue", "BlueViolet", "Brown", "Deeppink", "BurlyWood", "CadetBlue",
     "Chartreuse", "Chocolate", "Coral", "CornflowerBlue", "Crimson", "Cyan", "Red", "DarkBlue",
@@ -72,15 +77,38 @@ setup_data = function (svgID) {
     var graphnum = parseInt(svgID.split("g")[1]);
     console.log(graphnum);
     //Want to check if the data is cacged or not
+
+    data_url = "http://stemflow.net/data/GATA3.tsv"
+        $.get(url)
+        .done(function() { 
+            document.getElementById('test').innerHTML = "yes";
+        }).fail(function() {
+        
+            var searchval = document.getElementById('geneSearch').value;
+  
+            $.post("https://gos15bzh4h.execute-api.ap-southeast-2.amazonaws.com/test",
+            {
+              //filter: document.getElementById('geneSearch').valu
+              filter: searchval
+            },
+            function(data,status){
+                document.getElementById('test').innerHTML = status;
+            });
+        
+            //document.getElementById('test').innerHTML = "no";
+            
+        })   
     
-    if (graphnum % 2 == 0) {
-        data_url = 'Graph/data/test.tsv';
-    } else {
-        data_url = 'Graph/data/ds_id_2000_scatter_stat1.tsv';
-    }
+    
     d3.tsv(data_url, function (error, data) {
        // console.log("in data!")
-        
+       if (data == undefined) {
+            if (graphnum % 2 == 0) {
+                data_url = 'Graph/data/test.tsv';
+            } else {
+                data_url = 'Graph/data/ds_id_2000_scatter_stat1.tsv';
+            }   
+       }
         max = 0;
         min = 0;
         number_of_increments = 0;
