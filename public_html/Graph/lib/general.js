@@ -137,14 +137,14 @@
                 .css('width', full_width + 'px')
                 .css('height', full_height + 'px');
         
-     
+        var idname = options.target.split('#')[1];
         //svg.call(large_tip);
         // setup the SVG. We do this inside the d3.tsv as we want to keep everything in the same place
         // and inside the d3.tsv we get the data ready to go (called options.data in here)
         var svg = d3.select(options.target).append("svg")
                 .attr("width", full_width)
                 .attr("height", full_height)
-                .attr("id", options.target + "-svg")
+                .attr("id", idname + "-svg")
                 .append("g")
                 // this is just to move the picture down to the right margin length
                 .attr("transform", "translate(" + page_options.margin.left + "," + page_options.margin.top + ")" + " scale(" + scaleX + "," + scaleY + ")")

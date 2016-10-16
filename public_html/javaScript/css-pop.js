@@ -9,7 +9,8 @@ function toggle(div_id) {
 	if ( el.style.display == 'none' ) {
             el.style.display = 'block';
             var graphdiv = document.getElementById("g1");
-            //var svgdiv = document.get
+            var svgdiv = document.getElementById("g1-svg");
+            svgdiv.setAttribute("transform", "scale(" + 3 + "," + 3 + ")");
             el.appendChild(graphdiv);
         }
 	else {el.style.display = 'none';}
