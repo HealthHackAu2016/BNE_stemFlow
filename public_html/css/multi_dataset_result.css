@@ -1,7 +1,6 @@
 #multiChooseDatasets { margin-right: 50px; }
-#main_body { margin:0px !important; width: 3000px; }
+#main_body { width:100%; }
 body {
-    width: 3000px;
 }
 
 div.searchBox {

@@ -170,7 +170,7 @@ setup_data = function (svgID) {
             legend_padding: 50,
             height: 400,
             width: 600,
-            margin: {top: 50, left: 20, bottom: 0, right: 0},
+            margin: {top: 50, left: 0, bottom: -100, right: -100},
             initial_padding: 10,
             x_axis_label_padding: 10, //padding for the x axis labels (how far below the graph)
             text_size: "12px",

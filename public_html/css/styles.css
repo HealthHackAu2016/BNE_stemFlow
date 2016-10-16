@@ -1,9 +1,4 @@
 /*WebDesignAndSuch.com*/
-
-
-
-
-
 @charset "UTF-8";
 body {
 /*	font-family:Palatino, Baskerville, Georgia, serif;
@@ -54,7 +49,6 @@ img {border:0px}
    z-index: 100;
    top:0px;
    left:0px;
-   height: 3000px;
    width:100%;
 }
 
