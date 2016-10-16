@@ -1,0 +1,68 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  LambdaSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Open database for access
+      VpcId: "vpc-836889e7"
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '3306'
+        ToPort: '3306'
+        CidrIp: "0.0.0.0/0"
+      - IpProtocol: tcp
+        FromPort: '80'
+        ToPort: '80'
+        CidrIp: "0.0.0.0/0"
+      - IpProtocol: tcp
+        FromPort: '443'
+        ToPort: '443'
+        CidrIp: "0.0.0.0/0"           
+  StemflowRenderFunction:
+    Type: AWS::Lambda::Function
+    DependsOn: "LambdaSecurityGroup"
+    Properties:
+      Handler: gene_query.gene_query
+      Role: 
+       Fn::GetAtt:
+         - "LambdaExecutionRole"
+         - "Arn"
+      Code:
+        S3Bucket: "stemflow-lambda"
+        S3Key: "query.zip"
+      Runtime: python2.7
+      VpcConfig: 
+        SecurityGroupIds:
+          - Ref: "LambdaSecurityGroup"
+        SubnetIds:
+          - "subnet-9121f4e7"
+          - "subnet-8249e6e6"
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+            - lambda.amazonaws.com
+          Action:
+          - sts:AssumeRole
+      Path: "/"
+      Policies:
+      - PolicyName: root
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: "Allow"
+            Action:
+            - logs:*
+            - ec2:*
+            - s3:*
+            Resource: "*"
+Outputs:
+  LambdaArn:
+    Description: Arn of Lambda function
+    Value:
+      Ref: "StemflowRenderFunction"

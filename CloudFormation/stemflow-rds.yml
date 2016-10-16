@@ -1,0 +1,32 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  DBEC2SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Open database for access
+      VpcId: "vpc-836889e7"
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '3306'
+        ToPort: '3306'
+        CidrIp: "0.0.0.0/0"
+  DBSubnetGroup:
+    Type: "AWS::RDS::DBSubnetGroup"
+    Properties: 
+      DBSubnetGroupDescription: "RDS Subnet Group"
+      SubnetIds:
+        - "subnet-9321f4e5"
+        - "subnet-8349e6e7"
+  DBInstance:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBName: "stemflow"
+      Engine: MySQL
+      MasterUsername: "root"
+      DBInstanceClass: "db.t2.medium"
+      AllocatedStorage: 5
+      MasterUserPassword: "ChangeMe123!"
+      VPCSecurityGroups: 
+       - !GetAtt DBEC2SecurityGroup.GroupId
+      DBSubnetGroupName:
+        Ref: "DBSubnetGroup"

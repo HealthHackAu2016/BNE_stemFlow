@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  StemflowWebBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: "stemflow.net"
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error.html
+    DeletionPolicy: Retain
+  LambdaBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: "stemflow-lambda"
+    DeletionPolicy: Retain
+Outputs:
+  WebsiteURL:
+    Value: !GetAtt StemflowWebBucket.WebsiteURL
+    Description: URL for the website hosted on S3
+  S3BucketSecureURL:
+    Value: !Sub
+        - https://${Domain}
+        - Domain: !GetAtt StemflowWebBucket.DomainName
+    Description: Name of the S3 bucket to hold website content
