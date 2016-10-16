@@ -8,12 +8,13 @@ function toggle(div_id) {
 	var el = document.getElementById(div_id);
 	if ( el.style.display == 'none' ) {
             el.style.display = 'block';
-            var graphdiv = document.getElementById("g1");
+            var svgid = lastClickedGraph;
+            var graphdiv = document.getElementById(lastClickedGraph);
             graphdiv.setAttribute("width", "1000px");
-            var svgdiv = d3.select("#g1-svg")
+            var svgdiv = d3.select("#" + lastClickedGraph + "-svg")
                     .attr("width", 1000)
                     .attr("height", 1000);
-            var groupdiv = d3.select("#g1-group")
+            var groupdiv = d3.select("#" + lastClickedGraph + "-group")
                 .attr("transform", "translate(" + 100 + "," + 100 + ")" + " scale(" + 1.5 + "," + 1.5 + ")")
             el.appendChild(graphdiv);
         }
