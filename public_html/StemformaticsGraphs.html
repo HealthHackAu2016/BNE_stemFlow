@@ -1,112 +1,50 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!-- saved from url=(0109)http://www.stemformatics.org/expressions/multi_dataset_result?graphType=default&gene=ENSG00000107485&db_id=56 -->
+<!-- saved from url=(0109)http://stemflow.net/expressions/multi_dataset_result?graphType=default&gene=ENSG00000107485&db_id=56 -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
-		
-    <title>Stemformatics Graphs - Multi Dataset Result</title>
-    <meta name="google-site-verification" content="eKfRHsSQKFfEQDBulOvJy8P1H6d5PpjgRp8IoMXgE0A">
-	<!-- <meta http-equiv="content-language" content="en-us" /> -->
-	
- <link rel="stylesheet" type="text/css" href="Graph/css/biojs-vis-scatter-plot.css">
-        <meta name="author" content="Australian Institute of Bioengineering and Nanotechnology (AIBN)">
-        <meta name="description" content="">
-        <meta name="keywords" content="microarray, gene expression">
-	
-    <!-- Task #426 Safari iPhone issue -->
-    <meta name="format-detection" content="telephone=no">
-    <!-- jQuery, jQuery-UI and additional plug-ins should go here. -->
-    <script type="text/javascript" async="" src="./Stemformatics Graphs - Multi Dataset Result_files/ga.js"></script><script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/jquery.min.js"></script>
-
-    
-    <!-- jQuery css is included first.  Add other .css files after this line. -->
-        <link rel="stylesheet" type="text/css" href="./Stemformatics Graphs - Multi Dataset Result_files/jquery.dataTables.css">
-        <script type="text/javascript" charset="utf8" src="./Stemformatics Graphs - Multi Dataset Result_files/jquery.dataTables.min.js"></script>
-        <script src="./Stemformatics Graphs - Multi Dataset Result_files/jquery.simplemodal.min.js"></script>
-
-        <link href="./Stemformatics Graphs - Multi Dataset Result_files/combined_jquery_ui_tripoli_full.min.css" type="text/css" rel="stylesheet"> 
-
-	
-
-        <script src="./Stemformatics Graphs - Multi Dataset Result_files/main_table2CSV_help_min.js" type="text/javascript"></script> 
-
-
-    <link href="./Stemformatics Graphs - Multi Dataset Result_files/screen.css" type="text/css" rel="stylesheet"> 
-    
-
-    <script type="text/javascript">
-    
-        var BASE_PATH = "/";
-    var DELIMITER = "|";
-    var SITE_NAME = "Stemformatics";
-    check_browser(); // this relies on main.js
-    </script>
-
-
-
-
-    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/marked.min.js"></script>
-    <script src="./Stemformatics Graphs - Multi Dataset Result_files/jquery.cookie.js"></script> 
-    <script src="./Stemformatics Graphs - Multi Dataset Result_files/guiders-1.3.0.js"></script>
-
-
-    <script src="./Stemformatics Graphs - Multi Dataset Result_files/helpsystem.js" type="text/javascript"></script> 
-
-    
- 
+	<title>Stemformatics Graphs - Multi Dataset Result</title>
+	<link href="css/combined_jquery_ui_tripoli_full.min.css" type="text/css" rel="stylesheet"> 
+	<link href="css/screen.css" type="text/css" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="Graph/css/biojs-vis-scatter-plot.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+	<link type="text/css" href="css/gene_info.css" rel="stylesheet">
+	<link type="text/css" href="css/multi_dataset_result.css" rel="stylesheet">
+	<meta name="author" content="Australian Institute of Bioengineering and Nanotechnology (AIBN)">
+	<meta name="description" content="">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="google-site-verification" content="eKfRHsSQKFfEQDBulOvJy8P1H6d5PpjgRp8IoMXgE0A">
+	<meta name="keywords" content="microarray, gene expression">
+	<script src="script/guiders-1.3.0.js"></script>
+	<script src="script/helpsystem.js" type="text/javascript"></script> 
+	<script src="script/jquery.cookie.js"></script> 
+	<script src="script/jquery.simplemodal.min.js"></script>
+	<script src="script/kinetic.min.js"></script>
+	<script src="script/main_table2CSV_help_min.js" type="text/javascript"></script> 
+	<script type="text/javascript" async="" src="/script/ga.js"></script>
+	<script type="text/javascript" charset="utf8" src="script/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="script/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="script/marked.min.js"></script>
+	<script type="text/javascript" src="script/base64.js"></script>
+	<script type="text/javascript" src="script/canvas2image.js"></script>
+	<script type="text/javascript" src="script/geg.min.js"></script>
+	<script type="text/javascript" src="script/jquery.flot.min.js"></script>
+	<script type="text/javascript" src="script/jquery.min.js"></script>
+	<script type="text/javascript" src="script/md5-min.js"></script>
+	<script type="text/javascript" src="script/multi_dataset_result.js"></script>
+	<script type="text/javascript" src="script/s4m_graphing.min.js"></script>
+	    
 	<script type="text/javascript">
-      var _gaq = _gaq || [];
-         
-      _gaq.push(['_setAccount', 'UA-20041624-1']);
-      _gaq.push(['_setDomainName', 'none']);
-      _gaq.push(['_setAllowLinker', true]);
-      _gaq.push(['_trackPageview']);
+		var BASE_PATH = "/";
+		var DELIMITER = "|";
+		var SITE_NAME = "Stemformatics";
+		check_browser(); // this relies on main.js
+	</script>
+</head>
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-
-
-
-  
-        
-		<!-- all the javascript and css includes for the rendered mako file -->  	
-		
-
-    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/multi_dataset_result.js"></script>
-    
-        <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/geg.min.js"></script>
- 
-    
-    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/jquery.flot.min.js"></script>
-    <script src="./Stemformatics Graphs - Multi Dataset Result_files/kinetic.min.js"></script>
-    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/base64.js"></script>
-    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/canvas2image.js"></script>
-
-    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/s4m_graphing.min.js"></script>
-    <script type="text/javascript" src="./Stemformatics Graphs - Multi Dataset Result_files/md5-min.js"></script>
-
-
-
-    
-    <link type="text/css" href="./Stemformatics Graphs - Multi Dataset Result_files/gene_info.css" rel="stylesheet">
-    <link type="text/css" href="./Stemformatics Graphs - Multi Dataset Result_files/multi_dataset_result.css" rel="stylesheet">
-    
-    
-
-        
-	</head>
-
-	<body>
-        
+	<body style="width: 80%;margin: 0 auto;">
                 <div id="header">
-                
                 <div class="limitedHeader">
-                        <a class="logo" href="http://www.stemformatics.org/" data_hover_text="Click for home page"></a>
-                    <a href="http://www.stemformatics.org/"><div id="project_logo" class=""></div></a>
+                        <a class="logo" href="http://stemflow.net/" data_hover_text="Click for home page"></a>
+                    <a href="http://stemflow.net/"><div id="project_logo" class=""></div></a>
                     
                     <div class="rightHeader logged_in">
                         <div class="user-info">
@@ -114,64 +52,28 @@
                             <div class="full_name" id="full_name">Guest Account</div>
                             <div class="hidden" id="uid">44</div>
                         </div>
-                        <div class="login-tasks">
-                                <a id="logout_link" href="http://www.stemformatics.org/auth/logout">Logout </a>|<a href="http://www.stemformatics.org/auth/history/show">History</a>|<a class="no_padding_right" href="http://www.stemformatics.org/auth/update_details">My account</a><br><a href="http://www.stemformatics.org/ensembl_upgrade/index">Ensembl upgrade</a>
-                                <!-- |<a id=unread_notifications href="/auth/notifications">My Notifications (1)</a> -->
-                        </div>
-                        
+                        <!--<div class="login-tasks">
+                                <a id="logout_link" href="http://stemflow.net/auth/logout">Logout </a>|<a href="http://stemflow.net/auth/history/show">History</a>|<a class="no_padding_right" href="http://stemflow.net/auth/update_details">My account</a><br><a href="http://stemflow.net/ensembl_upgrade/index">Ensembl upgrade</a>
+                        </div>-->
                     </div>
                     
-    <div class="help_icon"><a href="http://www.stemformatics.org/contents/faq"><img src="./Stemformatics Graphs - Multi Dataset Result_files/help_icon.png"></a>
-        <ul class="main_help_menu">
-                <li><a class="page_guide" href="http://www.stemformatics.org/expressions/multi_dataset_result?graphType=default&amp;gene=ENSG00000107485&amp;db_id=56#">Toggle in-page help</a></li>
-
-
-            <li class="sep"></li>
-          
-        
-
-        
-                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=guest" data-tutorial="guest">Guest Tutorial</a></li>
-        
-
-        
-                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=create_gene_list" data-tutorial="create_gene_list">Create Gene List Tutorial</a></li>
-        
-
-        
-                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=Gene_List_View" data-tutorial="Gene_List_View">Gene List View Tutorial</a></li>
-        
-
-        
-                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=yugene" data-tutorial="yugene">Yugene Tutorial</a></li>
-        
-
-        
-                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=New_Features" data-tutorial="New_Features">New Features Tutorial</a></li>
-        
-
-        
-                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=multiview" data-tutorial="multiview">Multiview Tutorial</a></li>
-        
-
-        
-                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=gene_expression_graph" data-tutorial="gene_expression_graph">Gene Expression Graph Tutorial</a></li>
-        
-
-        
-                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=registration" data-tutorial="registration">Registration Tutorial</a></li>
-        
-
-        
-                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=Rohart_MSC_Test" data-tutorial="Rohart_MSC_Test">Rohart Msc Test Tutorial</a></li>
-        
-
-        
-                    <li><a href="http://www.stemformatics.org/contents/index#tutorial=gene_search" data-tutorial="gene_search">Gene Search Tutorial</a></li>
-                                                <li class="sep"></li>
-                                                <li><a href="http://www.stemformatics.org/contents/faq">General Help &amp; FAQ</a></li>
-         
-                                           </ul>
+    <div class="help_icon"><a href="http://stemflow.net/contents/faq"><img src="images/help_icon.png"></a>
+	            <!--<ul class="main_help_menu">
+		    <li><a class="page_guide" href="http://www.stemformatics.org/expressions/multi_dataset_result?graphType=default&amp;gene=ENSG00000107485&amp;db_id=56#">Toggle in-page help</a></li>
+		    <li class="sep"></li>
+                    <li><a href="http://stemflow.net/contents/index#tutorial=Gene_List_View" data-tutorial="Gene_List_View">Gene List View Tutorial</a></li>
+                    <li><a href="http://stemflow.net/contents/index#tutorial=New_Features" data-tutorial="New_Features">New Features Tutorial</a></li>
+                    <li><a href="http://stemflow.net/contents/index#tutorial=Rohart_MSC_Test" data-tutorial="Rohart_MSC_Test">Rohart Msc Test Tutorial</a></li>
+                    <li><a href="http://stemflow.net/contents/index#tutorial=create_gene_list" data-tutorial="create_gene_list">Create Gene List Tutorial</a></li>
+                    <li><a href="http://stemflow.net/contents/index#tutorial=gene_expression_graph" data-tutorial="gene_expression_graph">Gene Expression Graph Tutorial</a></li>
+                    <li><a href="http://stemflow.net/contents/index#tutorial=gene_search" data-tutorial="gene_search">Gene Search Tutorial</a></li>
+                    <li><a href="http://stemflow.net/contents/index#tutorial=guest" data-tutorial="guest">Guest Tutorial</a></li>
+                    <li><a href="http://stemflow.net/contents/index#tutorial=multiview" data-tutorial="multiview">Multiview Tutorial</a></li>
+                    <li><a href="http://stemflow.net/contents/index#tutorial=registration" data-tutorial="registration">Registration Tutorial</a></li>
+                    <li><a href="http://stemflow.net/contents/index#tutorial=yugene" data-tutorial="yugene">Yugene Tutorial</a></li>
+	            <li class="sep"></li>
+		    <li><a href="http://stemflow.net/contents/faq">General Help &amp; FAQ</a></li>
+		    </ul>-->
     </div>
 
                 </div>
@@ -179,43 +81,41 @@
             <div id="menus">
                 <div id="main_headers">
 
-
-
-                    <div class="header"><a id="header-genesearch-button" href="http://www.stemformatics.org/genes/search">GENES &gt;</a>
+                    <div class="header"><a id="header-genesearch-button" href="http://stemflow.net/genes/search">GENES &gt;</a>
                     </div>
                     <div class="header">
-                        <a id="header-datasetsearch-button" href="http://www.stemformatics.org/datasets/search">DATASETS &gt;</a>
+                        <a id="header-datasetsearch-button" href="http://stemflow.net/datasets/search">DATASETS &gt;</a>
                     </div>
-                    <div class="header"><a class="selected" id="header-graphs-button" href="http://www.stemformatics.org/expressions/index">GRAPHS &gt;</a></div>
-                    <div class="header"><a id="header-analyses-button" href="http://www.stemformatics.org/workbench/index">ANALYSES &gt;</a></div>
-                    <div class="header"><a id="header-analyses-button" href="http://www.stemformatics.org/workbench/jobs_index">MY JOBS &gt;</a></div>
-                    <div class="header"><a id="header-about-us-button" href="http://www.stemformatics.org/contents/about_us">ABOUT US &gt;</a></div>
+                    <div class="header"><a class="selected" id="header-graphs-button" href="http://stemflow.net/expressions/index">GRAPHS &gt;</a></div>
+                    <div class="header"><a id="header-analyses-button" href="http://stemflow.net/workbench/index">ANALYSES &gt;</a></div>
+                    <div class="header"><a id="header-analyses-button" href="http://stemflow.net/workbench/jobs_index">MY JOBS &gt;</a></div>
+                    <div class="header"><a id="header-about-us-button" href="http://stemflow.net/contents/about_us">ABOUT US &gt;</a></div>
                     <!-- <div class="search"><a href="/datasets/search">CELL SEARCH ></a></div>
                     <div class="search"><a href="/datasets/search">LOCATION SEARCH ></a></div> -->
                 </div>
             </div> 
 
         <div id="main_body" >
-            
             <!-- actual body for the rendered mako file -->
-    <div id="mult_dataset_graph_header">
+	    <div id="mult_dataset_graph_header">
         
-        <a id="multiChooseDatasets" class="chooseDatasetsButton multiview-attached page_guide-attached" href="http://www.stemformatics.org/expressions/multi_dataset_result?gene=ENSG00000107485&amp;db_id=56&amp;graphType=box&amp;force_choose=yes"><span>CHANGE DATASETS</span><img src="./Stemformatics Graphs - Multi Dataset Result_files/show_genes.png"></a>
+        <a id="multiChooseDatasets" class="chooseDatasetsButton multiview-attached page_guide-attached" href="http://stemflow.net/expressions/multi_dataset_result?gene=ENSG00000107485&amp;db_id=56&amp;graphType=box&amp;force_choose=yes"><span>CHANGE DATASETS</span><img src="images/show_genes.png"></a>
 
             <div class="search_box multiview-attached page_guide-attached">
                 <div class="searchField">
-                    <form id="geneSearchForm" name="search" method="GET" action="http://www.stemformatics.org/expressions/multi_dataset_result?graphType=default&amp;gene=ENSG00000107485&amp;db_id=56#">
+                    <form id="geneSearchForm" name="search" method="GET" action="http://stemflow.net/expressions/multi_dataset_result?graphType=default&amp;gene=ENSG00000107485&amp;db_id=56#">
                         <input id="geneSearch" name="filter" class="mv ui-autocomplete-input" type="text" value="GATA3" autocomplete="off"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
                     </form>
                 </div>
-                <a id="viewGenes" class="searchButton"><span>SEARCH</span><img src="./Stemformatics Graphs - Multi Dataset Result_files/show_genes.png"></a>
+                <a id="viewGenes" class="searchButton"><span>SEARCH</span><img src="images/show_genes.png"></a>
             </div>
 
 
     </div>
-            <div style="height: 3000px;">
-                    <div id = "main" ></div>
-        <script src="//d3js.org/d3.v3.min.js"></script>
+<!-- THIS IS THE STUFF -->
+	<div style="min-height:500px;">
+	<div id = "main" ></div>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
         <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="https://cdn.rawgit.com/eligrey/Blob.js/0cef2746414269b16834878a8abc52eb9d53e6bd/Blob.js"></script>
@@ -321,7 +221,7 @@
                     <div class="clear"></div> 
                 <div class="title">Stemformatics Data Methods</div>
                 <div class="description">This document includes the normalisation methods, mappings and database imports like Kegg.</div>
-                <div class="showDescription showLabel ">  Document Link </div><div class="showDescriptionValue"><a target="_blank" href="http://www.stemformatics.org/Stemformatics_data_methods.pdf" class="showDescriptionValue ">Data Methods PDF</a></div> 
+                <div class="showDescription showLabel ">  Document Link </div><div class="showDescriptionValue"><a target="_blank" href="http://stemflow.net/Stemformatics_data_methods.pdf" class="showDescriptionValue ">Data Methods PDF</a></div> 
                     
             </div>
                 
@@ -337,7 +237,7 @@
             <div id="footer">
                 <div class="footer_central">
                     <div class="leftfooterText">
-                        <span>© 2015 Stemformatics</span><span>v6.4</span><span><a href="http://www.stemformatics.org/contents/disclaimer">Disclaimer</a></span><span><a href="http://www.stemformatics.org/contents/privacy_policy">Privacy Policy</a></span><span>w3-s4m </span>
+                        <span>© 2015 Stemformatics</span><span>v6.4</span><span><a href="http://stemflow.net/contents/disclaimer">Disclaimer</a></span><span><a href="http://stemflow.net/contents/privacy_policy">Privacy Policy</a></span><span>w3-s4m </span>
                     </div>
                     <div class="rightfooterText">
                         <span class="website">Website hosted by </span><a class="qcif" href="http://www.qcif.edu.au/"></a>  <a class="nectar" href="http://nectar.org.au/"></a>
@@ -367,7 +267,7 @@
 </div>        <div class="guiders_buttons_container"><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow"></div></div><div class="guider multiview" id="multiview_2" style="width: 500px; display: none; position: absolute; top: 261.467px; left: 30px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title" style="margin-bottom: 0px;"></h1>        <div class="guiders_description"><p>Use this button to change which four datasets are currently displayed.</p>
 </div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow guiders_arrow_up" style="left: 21px;"></div></div><div class="guider multiview" id="multiview_3" style="width: 500px; display: none; position: absolute; top: 264.133px; left: 290.667px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title" style="margin-bottom: 0px;"></h1>        <div class="guiders_description"><p>You can also change the selected gene by using the search box.</p>
 </div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow guiders_arrow_up" style="left: 21px;"></div></div><div class="guider multiview" id="multiview_4" style="width: 500px; display: none; position: fixed; top: 333.222px; left: 952.333px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Tutorial Complete!</h1>        <div class="guiders_description"><p>Well done.  You have completed the tutorial.</p>
-<p>If you need help on the expression graph do <a href="http://www.stemformatics.org/contents/index#tutorial=gene_expression_graph">this</a> tutorial. Other tutorials can be found using the help icon at the top of the page</p>
+<p>If you need help on the expression graph do <a href="http://stemflow.net/contents/index#tutorial=gene_expression_graph">this</a> tutorial. Other tutorials can be found using the help icon at the top of the page</p>
 </div>        <div class="guiders_buttons_container"><a class="guiders_button previous" href="javascript:void(0);">Previous</a></div>    </div>    <div class="guiders_arrow"></div></div><div class="guider page_guide" id="page_guide_0" style="width: 500px; display: none; position: absolute; top: -82.8px; left: 30px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Change Datasets</h1>        <div class="guiders_description"><p>This allows you to select a different dataset.</p>
 <p>You can filter through the datasets by the search box at the top.</p>
 </div>        <div class="guiders_buttons_container"><a class="guiders_button next" href="javascript:void(0);">Next</a></div>    </div>    <div class="guiders_arrow guiders_arrow_down" style="left: 21px;"></div></div><div class="guider page_guide" id="page_guide_1" style="width: 500px; display: none; position: absolute; top: 549.833px; left: -554.8px;">    <div class="guiders_content">        <div class="guiders_close"><div class="guiders_x_button" role="button"></div></div>        <h1 class="guiders_title">Movable Legend</h1>        <div class="guiders_description"><p>This legend is movable. Simply left click and hold your mouse within the grey area and then move your mouse.</p>
