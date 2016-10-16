@@ -154,7 +154,39 @@
                         <div style="float:left;" id="g18"></div>
                 </div>
 
-                <script>multiview("g1");</script>
+                <script>
+                $("button").click(function(){
+    
+       var url = "http://stemflow.net/data/GATA3.tsv"
+        $.get(url)
+        .done(function() { 
+            document.getElementById('test').innerHTML = "yes";
+        }).fail(function() {
+        
+            // Sending and receiving data in JSON format using POST mothod
+            //
+            var url = "https://gos15bzh4h.execute-api.ap-southeast-2.amazonaws.com/test"
+            xhr = new XMLHttpRequest();
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.onreadystatechange = function () { 
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var json = JSON.parse(xhr.responseText);
+                    console.log(json.email + ", " + json.password)
+                }
+            }
+            var data = JSON.stringify({"filter":"GATA3,PDGFD"});
+            xhr.send(data);
+
+ 
+            
+        });  
+                multiview("g1");
+            });  
+                
+                
+                
+                </script>
                 <script>multiview("g2");</script>
                 <script>multiview("g3");</script>
                 <script>multiview("g4");</script>

@@ -74,9 +74,9 @@ setup_data = function (svgID) {
     //Want to check if the data is cacged or not
     
     if (graphnum % 2 == 0) {
-        data_url = 'Graph/data/test.tsv';
+        data_url = 'http://stemflow.net/data/GATA3.tsv';
     } else {
-        data_url = 'Graph/data/ds_id_2000_scatter_stat1.tsv';
+        data_url = 'http://stemflow.net/data/PDFG.tsv';
     }
     d3.tsv(data_url, function (error, data) {
        // console.log("in data!")
