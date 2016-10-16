@@ -143,8 +143,8 @@
         page_options = graph.page_options;
         full_width = page_options.full_width;
         full_height = page_options.full_height;
-        var scaleX = 0.9;
-        var scaleY = 0.9;
+        var scaleX = 0.8;
+        var scaleY = 0.8;
         graph.full_width = full_width;
         graph.full_height = full_height;
         background_stroke_width = options.background_stroke_width;
