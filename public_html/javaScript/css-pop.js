@@ -1,3 +1,9 @@
+/**
+ * http://wpandsuch.com/posts/css-popup/css-popup.html#
+ * @param {type} div_id
+ * @returns {undefined}
+ */
+
 function toggle(div_id) {
 	var el = document.getElementById(div_id);
 	if ( el.style.display == 'none' ) {	el.style.display = 'block';}
@@ -5,9 +11,9 @@ function toggle(div_id) {
 }
 function blanket_size(popUpDivVar) {
 	if (typeof window.innerWidth != 'undefined') {
-		viewportheight = window.innerHeight;
+		viewportheight = window.innerHeight/2;
 	} else {
-		viewportheight = document.documentElement.clientHeight;
+		viewportheight = document.documentElement.clientHeight/2;
 	}
 	if ((viewportheight > document.body.parentNode.scrollHeight) && (viewportheight > document.body.parentNode.clientHeight)) {
 		blanket_height = viewportheight;
@@ -22,7 +28,7 @@ function blanket_size(popUpDivVar) {
 	blanket.style.height = blanket_height + 'px';
 	var popUpDiv = document.getElementById(popUpDivVar);
 	popUpDiv_height=blanket_height/2-200;//200 is half popup's height
-	popUpDiv.style.top = popUpDiv_height + 'px';
+	popUpDiv.style.top = popUpDiv_height/2.5 + 'px';
 }
 function window_pos(popUpDivVar) {
 	if (typeof window.innerWidth != 'undefined') {
@@ -41,7 +47,7 @@ function window_pos(popUpDivVar) {
 	}
 	var popUpDiv = document.getElementById(popUpDivVar);
 	window_width=window_width/2-200;//200 is half popup's width
-	popUpDiv.style.left = window_width + 'px';
+	popUpDiv.style.left = window_width/1.25 + 'px';
 }
 function popup(windowname) {
 	blanket_size(windowname);
