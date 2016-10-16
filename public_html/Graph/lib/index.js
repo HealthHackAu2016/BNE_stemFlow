@@ -40,6 +40,8 @@ var biojsvisscatterplot;
 //{
 
 
+var lastClickedGraph = null;
+
     //setting up the line to append for each of the values (i.e. line between scatter points)
     //http://bl.ocks.org/d3noob/e99a762017060ce81c76 helpful for nesting the probes
     setup_scatter_line = function (graph) {
@@ -159,7 +161,7 @@ var biojsvisscatterplot;
         return graph;
     }; // setup_data_for_x_axis
 
- 
+
 
 
     /**
@@ -308,11 +310,11 @@ var biojsvisscatterplot;
     }
 
     setup_graph = function (graph) {
-        
+
         // setup all the graph elements
         options = graph.options;
 
-        graph = setup_margins(graph); 
+        graph = setup_margins(graph);
         graph = set_data_order(graph);
         //graph =  setup_size_options(graph);
         // setup svg in general.js
@@ -359,7 +361,7 @@ var biojsvisscatterplot;
         page_options = {}; // was new Object() but jshint wanted me to change this
         var graph = {}; // this is a new object
         graph.options = options;
-        
+
         graph = preprocess_lines(graph);
         graph = setup_graph(graph);
        // var target = $(options.target);
