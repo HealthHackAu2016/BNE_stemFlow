@@ -152,11 +152,9 @@
                         .on('click', function() {
                       // var thissvg = d3.select(this);
                       // thissvg.attr("transform", "translate(" + 300 + "," + 300+ ")" + " scale(" + 3 + "," + 3 + ")");
-                                    console.log("clicked!");
 									lastClickedGraph = idname
 									console.log("lastClickedGraph id: " + lastClickedGraph);
-                                    console.log(idname);
-
+									popup('popUpDiv')
                                    // thissvg.call(options.tipLarge);
                                    // options.tipLarge.show;
                 })
