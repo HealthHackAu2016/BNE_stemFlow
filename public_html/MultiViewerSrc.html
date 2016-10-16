@@ -5,7 +5,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head> 
+    <head>
         <title>StemFlow</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@ and open the template in the editor.
         <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="https://cdn.rawgit.com/eligrey/Blob.js/0cef2746414269b16834878a8abc52eb9d53e6bd/Blob.js"></script>
+        <script async src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
 
         <script src="Graph/examples/many_samples_large.js"></script>
         <script src="Graph/lib/features.js"></script>
@@ -25,25 +26,30 @@ and open the template in the editor.
         <!-- <script src="Graph/lib/box_bar_line.js"></script> -->
         <script src="Graph/lib/general.js"></script>
         <script src="Graph/lib/index.js"></script>
-        <script src="javaScript/multiview.js"></script> 
-        
-            <div style="width: 30000px;">
-    <div id="column1" style="float: left; width: 800px; height: 400px;">
-            <div id="g1"></div>
-            <div id="g2"></div>
-            <div id="g3"></div>
- 
-    </div>
-    <div id="column2" style="float: left; width: 800px; height: 400px;">
-            <div id="g4"></div>
-            <div id="g5"></div>
-            <div id="g6"></div>
-    </div>
-    <div id="column3" style="float: left; width: 800px; height: 400px;">
-            <div id="g7"></div>
-            <div id="g8"></div>
-            <div id="g9"></div>
-    </div>
+        <script src="javaScript/multiview.js"></script>
+
+        <script>
+            window.sr = ScrollReveal();
+            sr.reveal('.foo');
+            sr.reveal('.bar');
+        </script>
+
+        <div style="width: 30000px;">
+            <div id="column1" style="float: left; width: 800px; height: 400px;">
+                <div class="row1" id="g1"></div>
+                <div class="row2" id="g2"></div>
+                <div class="row3" id="g3"></div>
+            </div>
+            <div id="column2" style="float: left; width: 800px; height: 400px;">
+                <div class="row1" id="g4"></div>
+                <div class="row2" id="g5"></div>
+                <div class="row3" id="g6"></div>
+            </div>
+            <div id="column3" style="float: left; width: 800px; height: 400px;">
+                <div class="row1" id="g7"></div>
+                <div class="row2" id="g8"></div>
+                <div class="row3" id="g9"></div>
+            </div>
 <!--    <div id="column4" style="float: left; width: 800px; height: 400px;">
             <div id="g10">hello</div>
             <div id="g11">hello</div>
@@ -60,7 +66,7 @@ and open the template in the editor.
             <div id="g18">hello</div>
     </div>-->
     </div>
-    
+
     <script>multiview("g1");</script>
     <script> multiview("g2");</script>
     <script> multiview("g3");</script>
@@ -81,8 +87,7 @@ and open the template in the editor.
     <script>multiview("g18");</script>-->
         <script>
             //Call with the id of te element within which we want to create it
-            //
-            
+
 
         </script>
 
