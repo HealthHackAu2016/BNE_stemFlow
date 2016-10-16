@@ -45,3 +45,12 @@ The example is in Graph/examples and I have set it up to run test.tsv (located i
  - horizontal lines (dt etc.)
  - vertical lines (to separate samples etc)
  - legend
+ 
+ ## “StemFlow” Team Members:
+ - Ariane Mora
+ - Kevin Wessel
+ - Liam Van der Meer
+ - Peita Lin
+ - Shaun Pearse
+ - Thomas Steel
+ - Matthew Taylor
