@@ -59,7 +59,7 @@ var tooltip = d3.tip()
 
 //The url's to the data displayed
 data_url = 'Graph/data/test.tsv';
-
+data_url = 'Graph/data/ds_id_2000_scatter_stat1.tsv';
 
 //data_url = '../data/ds_id_2000_scatter_stat1.tsv';
 //data_url = '../data/ds_id_2000_scatter_pdgfd.tsv';
@@ -71,6 +71,11 @@ setup_data = function (svgID) {
     var tmpname = svgID.split("#")[1];
     var graphnum = parseInt(svgID.split("g")[1]);
     console.log(graphnum);
+    if (graphnum % 2 == 0) {
+        data_url = 'Graph/data/test.tsv';
+    } else {
+        data_url = 'Graph/data/ds_id_2000_scatter_stat1.tsv';
+    }
     d3.tsv(data_url, function (error, data) {
        // console.log("in data!")
         
